@@ -61,9 +61,12 @@
 <span class="sd">The interface classes rely on the python :mod:`abc` module to support Abstract Base</span>
 <span class="sd">Classes</span>
 <span class="sd">&#39;&#39;&#39;</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
 
 <span class="kn">import</span> <span class="nn">abc</span>
 <span class="kn">from</span> <span class="nn">inspect</span> <span class="kn">import</span> <span class="n">ismethod</span><span class="p">,</span> <span class="n">getargspec</span>
+<span class="kn">import</span> <span class="nn">parameter</span>
 
 <div class="viewcode-block" id="IABCMeta"><a class="viewcode-back" href="../../percivalui/detector.html#detector.interface.IABCMeta">[docs]</a><span class="k">class</span> <span class="nc">IABCMeta</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
@@ -137,14 +140,22 @@
 <span class="sd">        Start the detector acquiring data</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+    </div></div>
+<div class="viewcode-block" id="IParameter"><a class="viewcode-back" href="../../percivalui/detector.html#detector.interface.IParameter">[docs]</a><span class="k">class</span> <span class="nc">IParameter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Base class interface to describe a detector parameter</span>
+<span class="sd">    </span>
+<span class="sd">    The :obj:`value` object is a :class:`detector.parameter.Observable` instance </span>
+<span class="sd">    to which callbacks can be registerred to provide notification updates</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">__metaclass__</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">parameter</span><span class="o">.</span><span class="n">Observable</span><span class="p">(</span><span class="s">&#39;value&#39;</span><span class="p">)</span>
     
-
-</div></div>
-<div class="viewcode-block" id="IControl"><a class="viewcode-back" href="../../percivalui/detector.html#detector.interface.IControl">[docs]</a><span class="k">class</span> <span class="nc">IControl</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</div>
+<div class="viewcode-block" id="IControl"><a class="viewcode-back" href="../../percivalui/detector.html#detector.interface.IControl">[docs]</a><span class="k">class</span> <span class="nc">IControl</span><span class="p">(</span><span class="n">IABCMeta</span><span class="p">):</span>
     <span class="n">__metaclass__</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span>
     
 </div>
-<div class="viewcode-block" id="IData"><a class="viewcode-back" href="../../percivalui/detector.html#detector.interface.IData">[docs]</a><span class="k">class</span> <span class="nc">IData</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="IData"><a class="viewcode-back" href="../../percivalui/detector.html#detector.interface.IData">[docs]</a><span class="k">class</span> <span class="nc">IData</span><span class="p">(</span><span class="n">IABCMeta</span><span class="p">):</span>
     <span class="n">__metaclass__</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span>
     
     <span class="k">def</span> <span class="nf">get_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -153,7 +164,33 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">fname</span>
     <span class="n">filename</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">abstractproperty</span><span class="p">(</span><span class="n">get_filename</span><span class="p">,</span> <span class="n">set_filename</span><span class="p">)</span>
     
+    <span class="k">def</span> <span class="nf">get_datasetname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">datasetname</span>
+    <span class="k">def</span> <span class="nf">set_datasetname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">datasetname</span>
+    <span class="n">datasetname</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">abstractproperty</span><span class="p">(</span><span class="n">get_datasetname</span><span class="p">,</span> <span class="n">set_datasetname</span><span class="p">)</span>
+    
+    <span class="nd">@abc.abstractmethod</span>
+<div class="viewcode-block" id="IData.start_capture"><a class="viewcode-back" href="../../percivalui/detector.html#detector.interface.IData.start_capture">[docs]</a>    <span class="k">def</span> <span class="nf">start_capture</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">nframes</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Start capturing data frames into a filename.</span>
+<span class="sd">        </span>
+<span class="sd">        :param filename: Name of file to capture and store frames in.</span>
+<span class="sd">        :param nframes: Numbef of frames, expected to be acquired and stored.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
     </div>
+    <span class="nd">@abc.abstractmethod</span>
+<div class="viewcode-block" id="IData.wait_complete"><a class="viewcode-back" href="../../percivalui/detector.html#detector.interface.IData.wait_complete">[docs]</a>    <span class="k">def</span> <span class="nf">wait_complete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Wait and return once the current capture session has completed.</span>
+<span class="sd">        This function will return when the required number of frames has been captured</span>
+<span class="sd">        into the file - or throw Timeout exception after a timeout.</span>
+<span class="sd">        </span>
+<span class="sd">        :param timeout: Number of seconds to block before timing out.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+    </div></div>
 </pre></div>
 
           </div>
@@ -161,6 +198,9 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/PERCIVAL-logo.jpg" alt="Logo"/>
+            </a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">

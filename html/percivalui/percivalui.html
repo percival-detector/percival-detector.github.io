@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>percivalui Package &mdash; Percival 0.0.0 documentation</title>
+    <title>PercivalUI &mdash; Percival 0.0.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -50,15 +50,19 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="percivalui-package">
-<h1>percivalui Package<a class="headerlink" href="#percivalui-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><a class="reference internal" href="#module-percivalui" title="percivalui"><tt class="xref py py-mod docutils literal"><span class="pre">percivalui</span></tt></a> package<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="module-percivalui"></span></div>
-<div class="section" id="module-percivalui.percival">
-<span id="percival-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">percival</span></tt> module<a class="headerlink" href="#module-percivalui.percival" title="Permalink to this headline">¶</a></h2>
-<p>Created on 25 Jul 2014</p>
-<p>&#64;author: up45</p>
+  <div class="section" id="percivalui">
+<h1>PercivalUI<a class="headerlink" href="#percivalui" title="Permalink to this headline">¶</a></h1>
+<p>The Percival User Interface consist of a number of python classes which can be used
+to control and read out data from the Percival detector system.</p>
+<p>The following document the API for these classes. The classes can also be used
+in interactive python sessions where users directly call the relevant
+functions to control the system. In fact this use-case is recommended to begin with.</p>
+<div class="section" id="module-percivalui">
+<span id="percivalui-package"></span><h2><a class="reference internal" href="#module-percivalui" title="percivalui"><tt class="xref py py-mod docutils literal"><span class="pre">percivalui</span></tt></a> package<a class="headerlink" href="#module-percivalui" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="percival-module">
+<h2><tt class="xref py py-mod docutils literal"><span class="pre">percival</span></tt> module<a class="headerlink" href="#percival-module" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-percivalui.percival"></span><p>The main PercivalUI module</p>
 <dl class="class">
 <dt id="percivalui.percival.CarrierBoard">
 <em class="property">class </em><tt class="descclassname">percivalui.percival.</tt><tt class="descname">CarrierBoard</tt><a class="reference internal" href="../_modules/percivalui/percival.html#CarrierBoard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percivalui.percival.CarrierBoard" title="Permalink to this definition">¶</a></dt>
@@ -66,9 +70,56 @@
 </dd></dl>
 
 <dl class="class">
+<dt id="percivalui.percival.DACs">
+<em class="property">class </em><tt class="descclassname">percivalui.percival.</tt><tt class="descname">DACs</tt><a class="reference internal" href="../_modules/percivalui/percival.html#DACs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percivalui.percival.DACs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="percivalui.percival.MezzanineBoard">
 <em class="property">class </em><tt class="descclassname">percivalui.percival.</tt><tt class="descname">MezzanineBoard</tt><a class="reference internal" href="../_modules/percivalui/percival.html#MezzanineBoard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percivalui.percival.MezzanineBoard" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<dd><p>Bases: <a class="reference internal" href="detector.html#detector.interface.IData" title="detector.interface.IData"><tt class="xref py py-class docutils literal"><span class="pre">detector.interface.IData</span></tt></a></p>
+<dl class="attribute">
+<dt id="percivalui.percival.MezzanineBoard.datasetname">
+<tt class="descname">datasetname</tt><a class="headerlink" href="#percivalui.percival.MezzanineBoard.datasetname" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="percivalui.percival.MezzanineBoard.filename">
+<tt class="descname">filename</tt><a class="headerlink" href="#percivalui.percival.MezzanineBoard.filename" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="percivalui.percival.MezzanineBoard.get_datasetname">
+<tt class="descname">get_datasetname</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/percivalui/percival.html#MezzanineBoard.get_datasetname"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percivalui.percival.MezzanineBoard.get_datasetname" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="percivalui.percival.MezzanineBoard.get_filename">
+<tt class="descname">get_filename</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/percivalui/percival.html#MezzanineBoard.get_filename"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percivalui.percival.MezzanineBoard.get_filename" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="percivalui.percival.MezzanineBoard.set_datasetname">
+<tt class="descname">set_datasetname</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/percivalui/percival.html#MezzanineBoard.set_datasetname"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percivalui.percival.MezzanineBoard.set_datasetname" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="percivalui.percival.MezzanineBoard.set_filename">
+<tt class="descname">set_filename</tt><big>(</big><em>fname</em><big>)</big><a class="reference internal" href="../_modules/percivalui/percival.html#MezzanineBoard.set_filename"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percivalui.percival.MezzanineBoard.set_filename" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="percivalui.percival.MezzanineBoard.start_capture">
+<tt class="descname">start_capture</tt><big>(</big><em>filename</em>, <em>nframes</em><big>)</big><a class="reference internal" href="../_modules/percivalui/percival.html#MezzanineBoard.start_capture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percivalui.percival.MezzanineBoard.start_capture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implements interface: <a class="reference internal" href="detector.html#detector.interface.IData.start_capture" title="detector.interface.IData.start_capture"><tt class="xref py py-func docutils literal"><span class="pre">detector.interface.IData.start_capture()</span></tt></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="percivalui.percival.MezzanineBoard.wait_complete">
+<tt class="descname">wait_complete</tt><big>(</big><em>timeout</em><big>)</big><a class="reference internal" href="../_modules/percivalui/percival.html#MezzanineBoard.wait_complete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percivalui.percival.MezzanineBoard.wait_complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implements interface: <a class="reference internal" href="detector.html#detector.interface.IData.wait_complete" title="detector.interface.IData.wait_complete"><tt class="xref py py-func docutils literal"><span class="pre">detector.interface.IData.wait_complete()</span></tt></a></p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -84,12 +135,12 @@
 
 <dl class="attribute">
 <dt id="percivalui.percival.PercivalUI.control">
-<tt class="descname">control</tt><em class="property"> = &lt;percivalui.percival.CarrierBoard object at 0x32bf190&gt;</em><a class="headerlink" href="#percivalui.percival.PercivalUI.control" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">control</tt><em class="property"> = &lt;percivalui.percival.CarrierBoard object at 0x3809750&gt;</em><a class="headerlink" href="#percivalui.percival.PercivalUI.control" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="percivalui.percival.PercivalUI.data">
-<tt class="descname">data</tt><em class="property"> = &lt;percivalui.percival.MezzanineBoard object at 0x32bf1d0&gt;</em><a class="headerlink" href="#percivalui.percival.PercivalUI.data" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">data</tt><em class="property"> = &lt;percivalui.percival.MezzanineBoard object at 0x38098d0&gt;</em><a class="headerlink" href="#percivalui.percival.PercivalUI.data" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -108,11 +159,14 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/PERCIVAL-logo.jpg" alt="Logo"/>
+            </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">percivalui Package</a><ul>
-<li><a class="reference internal" href="#id1"><tt class="docutils literal"><span class="pre">percivalui</span></tt> package</a></li>
-<li><a class="reference internal" href="#module-percivalui.percival"><tt class="docutils literal"><span class="pre">percival</span></tt> module</a></li>
+<li><a class="reference internal" href="#">PercivalUI</a><ul>
+<li><a class="reference internal" href="#module-percivalui"><tt class="docutils literal"><span class="pre">percivalui</span></tt> package</a></li>
+<li><a class="reference internal" href="#percival-module"><tt class="docutils literal"><span class="pre">percival</span></tt> module</a></li>
 </ul>
 </li>
 </ul>

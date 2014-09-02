@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="top" title="Percival 0.0.0 documentation" href="../index.html" />
-    <link rel="next" title="percivalui Package" href="percivalui.html" />
+    <link rel="next" title="PercivalUI" href="percivalui.html" />
     <link rel="prev" title="User Guide" href="../userguide.html" /> 
   </head>
   <body>
@@ -40,7 +40,7 @@
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="percivalui.html" title="percivalui Package"
+          <a href="percivalui.html" title="PercivalUI"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="../userguide.html" title="User Guide"
@@ -92,7 +92,7 @@ Classes</p>
 <dl class="class">
 <dt id="detector.interface.IControl">
 <em class="property">class </em><tt class="descclassname">detector.interface.</tt><tt class="descname">IControl</tt><a class="reference internal" href="../_modules/detector/interface.html#IControl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.interface.IControl" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<dd><p>Bases: <a class="reference internal" href="#detector.interface.IABCMeta" title="detector.interface.IABCMeta"><tt class="xref py py-class docutils literal"><span class="pre">detector.interface.IABCMeta</span></tt></a></p>
 </dd></dl>
 
 </div>
@@ -101,7 +101,53 @@ Classes</p>
 <dl class="class">
 <dt id="detector.interface.IData">
 <em class="property">class </em><tt class="descclassname">detector.interface.</tt><tt class="descname">IData</tt><a class="reference internal" href="../_modules/detector/interface.html#IData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.interface.IData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#detector.interface.IABCMeta" title="detector.interface.IABCMeta"><tt class="xref py py-class docutils literal"><span class="pre">detector.interface.IABCMeta</span></tt></a></p>
+<dl class="method">
+<dt id="detector.interface.IData.start_capture">
+<tt class="descname">start_capture</tt><big>(</big><em>filename</em>, <em>nframes</em><big>)</big><a class="reference internal" href="../_modules/detector/interface.html#IData.start_capture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.interface.IData.start_capture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start capturing data frames into a filename.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> &#8211; Name of file to capture and store frames in.</li>
+<li><strong>nframes</strong> &#8211; Numbef of frames, expected to be acquired and stored.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="detector.interface.IData.wait_complete">
+<tt class="descname">wait_complete</tt><big>(</big><em>timeout</em><big>)</big><a class="reference internal" href="../_modules/detector/interface.html#IData.wait_complete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.interface.IData.wait_complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait and return once the current capture session has completed.
+This function will return when the required number of frames has been captured
+into the file - or throw Timeout exception after a timeout.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>timeout</strong> &#8211; Number of seconds to block before timing out.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="iparameter-interface">
+<h3><a class="reference internal" href="#detector.interface.IParameter" title="detector.interface.IParameter"><tt class="xref py py-class docutils literal"><span class="pre">IParameter</span></tt></a> interface<a class="headerlink" href="#iparameter-interface" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="detector.interface.IParameter">
+<em class="property">class </em><tt class="descclassname">detector.interface.</tt><tt class="descname">IParameter</tt><a class="reference internal" href="../_modules/detector/interface.html#IParameter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.interface.IParameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>Base class interface to describe a detector parameter</p>
+<p>The <tt class="xref py py-obj docutils literal"><span class="pre">value</span></tt> object is a <a class="reference internal" href="#detector.parameter.Observable" title="detector.parameter.Observable"><tt class="xref py py-class docutils literal"><span class="pre">detector.parameter.Observable</span></tt></a> instance 
+to which callbacks can be registerred to provide notification updates</p>
 </dd></dl>
 
 </div>
@@ -174,6 +220,66 @@ can assign default values to the arguments if desired.</p>
 </div>
 </div>
 </div>
+<div class="section" id="module-detector.parameter">
+<span id="parameter-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">parameter</span></tt> module<a class="headerlink" href="#module-detector.parameter" title="Permalink to this headline">¶</a></h2>
+<p>Support for observable parameters.
+When using <a class="reference internal" href="#detector.parameter.Observable" title="detector.parameter.Observable"><tt class="xref py py-class docutils literal"><span class="pre">Observable</span></tt></a> it is possible to register observers
+for notifications (callbacks) on change of data values.</p>
+<p>The implementation is thread safe by using python threading locks.</p>
+<div class="section" id="observable">
+<h3><a class="reference internal" href="#detector.parameter.Observable" title="detector.parameter.Observable"><tt class="xref py py-class docutils literal"><span class="pre">Observable</span></tt></a><a class="headerlink" href="#observable" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="detector.parameter.Observable">
+<em class="property">class </em><tt class="descclassname">detector.parameter.</tt><tt class="descname">Observable</tt><big>(</big><em>name</em><big>)</big><a class="reference internal" href="../_modules/detector/parameter.html#Observable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.parameter.Observable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>An observable implemented as a <a class="reference external" href="https://docs.python.org/2/howto/descriptor.html">python Descriptor</a>.</p>
+<p>Use the <a class="reference internal" href="#detector.parameter.Observable.subscribe" title="detector.parameter.Observable.subscribe"><tt class="xref py py-func docutils literal"><span class="pre">Observable.subscribe()</span></tt></a> to register for notification updates.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Note :</th><td class="field-body">The business logic is deferred to the <tt class="xref py py-class docutils literal"><span class="pre">Observable.__ObservableValue__</span></tt> class
+in <tt class="xref py py-obj docutils literal"><span class="pre">self.observable_value</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="detector.parameter.Observable._NotifySubscription">
+<em class="property">class </em><tt class="descname">_NotifySubscription</tt><big>(</big><em>subscriber</em>, <em>observable</em><big>)</big><a class="reference internal" href="../_modules/detector/parameter.html#Observable._NotifySubscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.parameter.Observable._NotifySubscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>A subscription class which cancels the notifications to the subscriber
+when instances of this class are finalised.</p>
+<p>There is no need to directly instansiate or operate on insatances of this class.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="detector.parameter.Observable.subscribe">
+<tt class="descclassname">Observable.</tt><tt class="descname">subscribe</tt><big>(</big><em>obsv</em>, <em>exception_handler=None</em><big>)</big><a class="reference internal" href="../_modules/detector/parameter.html#Observable.subscribe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.parameter.Observable.subscribe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a subscriber to be notified on change of value in the Observable.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>obsv</strong> (a callable or another <a class="reference internal" href="#detector.parameter.Observable" title="detector.parameter.Observable"><tt class="xref py py-class docutils literal"><span class="pre">Observable</span></tt></a> object. 
+The callable must accept one argument which is the updated value.) &#8211; Observer to be notified of change.</li>
+<li><strong>exception_handler</strong> (<em>callable with one argument which is the raised exception</em>) &#8211; An exception handler or None</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#detector.parameter.Observable._NotifySubscription" title="detector.parameter.Observable._NotifySubscription"><tt class="xref py py-class docutils literal"><span class="pre">Observable._NotifySubscription</span></tt></a> object. Hang on to this object
+for as long as notification updates are required. When this object is finalised,
+the notification updates will be cancelled.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
 </div>
 
 
@@ -182,6 +288,9 @@ can assign default values to the arguments if desired.</p>
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/PERCIVAL-logo.jpg" alt="Logo"/>
+            </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">detector Package</a><ul>
@@ -190,8 +299,13 @@ can assign default values to the arguments if desired.</p>
 <li><a class="reference internal" href="#idetector-interface"><tt class="docutils literal"><span class="pre">IDetector</span></tt> interface</a></li>
 <li><a class="reference internal" href="#icontrol-interface"><tt class="docutils literal"><span class="pre">IControl</span></tt> interface</a></li>
 <li><a class="reference internal" href="#idata-interface"><tt class="docutils literal"><span class="pre">IData</span></tt> interface</a></li>
+<li><a class="reference internal" href="#iparameter-interface"><tt class="docutils literal"><span class="pre">IParameter</span></tt> interface</a></li>
 <li><a class="reference internal" href="#iabcmeta-mix-in"><tt class="docutils literal"><span class="pre">IABCMeta</span></tt> mix-in</a></li>
 <li><a class="reference internal" href="#example-use-of-interfaces">Example use of interfaces</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-detector.parameter"><tt class="docutils literal"><span class="pre">parameter</span></tt> module</a><ul>
+<li><a class="reference internal" href="#observable"><tt class="docutils literal"><span class="pre">Observable</span></tt></a></li>
 </ul>
 </li>
 </ul>
@@ -203,7 +317,7 @@ can assign default values to the arguments if desired.</p>
                         title="previous chapter">User Guide</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="percivalui.html"
-                        title="next chapter">percivalui Package</a></p>
+                        title="next chapter">PercivalUI</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../_sources/percivalui/detector.txt"
@@ -236,7 +350,7 @@ can assign default values to the arguments if desired.</p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="percivalui.html" title="percivalui Package"
+          <a href="percivalui.html" title="PercivalUI"
              >next</a> |</li>
         <li class="right" >
           <a href="../userguide.html" title="User Guide"

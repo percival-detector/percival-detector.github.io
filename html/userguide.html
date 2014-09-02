@@ -56,12 +56,77 @@
             
   <div class="section" id="user-guide">
 <h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h1>
-<p>Startup.
-Acquire.
-Parameters.
-Scan.
-Process.
-View.</p>
+<p>Cover topics:</p>
+<ul class="simple">
+<li>Startup.</li>
+<li>Acquire.</li>
+<li>Parameters.</li>
+<li>Scan.</li>
+<li>Process.</li>
+<li>View.</li>
+</ul>
+<div class="section" id="getting-started-simple-scan">
+<h2>Getting started: simple scan<a class="headerlink" href="#getting-started-simple-scan" title="Permalink to this headline">¶</a></h2>
+<p>A scan of a DAC parameter is a relatively simple task. The following demonstrate how
+to achieve this with a single loop. The basic steps include:</p>
+<ul class="simple">
+<li>Instansiate a <a class="reference internal" href="percivalui/percivalui.html#percivalui.percival.PercivalUI" title="percivalui.percival.PercivalUI"><tt class="xref py py-class docutils literal"><span class="pre">percivalui.percival.PercivalUI</span></tt></a> object.</li>
+<li>Configure the <a class="reference internal" href="percivalui/percivalui.html#percivalui.percival.PercivalUI.data" title="percivalui.percival.PercivalUI.data"><tt class="xref py py-obj docutils literal"><span class="pre">percivalui.percival.PercivalUI.data</span></tt></a> instance to capture data into a file.</li>
+<li>Scan through a list of DAC values, and for each value command an acquisition of N frames.</li>
+<li>Wait for file saving to complete.</li>
+<li>Request the details of where the dataset was stored.</li>
+<li>Open dataset and start processing.</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">A simple PercivalUI scan demo</span>
+
+<span class="sd">This demonstrates how to do a synchronous scan of a DAC </span>
+<span class="sd">parameter while acquiring samples off the detector.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="kn">from</span> <span class="nn">percivalui</span> <span class="kn">import</span> <span class="n">PercivalUI</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="n">pcvl</span> <span class="o">=</span> <span class="n">PercivalUI</span><span class="p">()</span>
+
+<span class="c"># Do a rough scan (steps of 8) through a 12 bit DAC subrange</span>
+<span class="n">DAC_scan_values</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">512</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+
+<span class="n">nframes_per_step</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">nframes_total</span> <span class="o">=</span> <span class="n">nframes_per_step</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">DAC_scan_values</span><span class="p">)</span>
+
+<span class="c"># Prepare to record the acquired data into a file with a timestamp in the name</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> 
+<span class="n">data_filename</span> <span class="o">=</span> <span class="s">&#39;simplescan_demo_</span><span class="si">%s</span><span class="s">.h5&#39;</span><span class="o">%</span><span class="n">start_time</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+<span class="n">pcvl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">start_capture</span><span class="p">(</span><span class="n">data_filename</span><span class="p">,</span> <span class="n">nframes</span><span class="o">=</span><span class="n">nframes_total</span><span class="p">)</span>
+
+<span class="c"># Scan through the desired DAC values</span>
+<span class="k">for</span> <span class="n">DAC_value</span> <span class="ow">in</span> <span class="n">DAC_scan_values</span><span class="p">:</span>
+    
+    <span class="c"># Set the desired control DAC parameter. In this example &quot;some_gain&quot;</span>
+    <span class="n">pcvl</span><span class="o">.</span><span class="n">control</span><span class="o">.</span><span class="n">dacs</span><span class="o">.</span><span class="n">some_gain</span> <span class="o">=</span> <span class="n">DAC_value</span>
+    
+    <span class="c"># Acquire 10 frames for each step with a 0.1s exposure per frame</span>
+    <span class="c"># With wait=True, this function will block until aquisition completes</span>
+    <span class="n">pcvl</span><span class="o">.</span><span class="n">acquire</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">nframes_per_step</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    
+<span class="c"># Now wait for the data to be stored to disk. This function</span>
+<span class="c"># blocks until data capture is complete or stopped.</span>
+<span class="n">pcvl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">wait_complete</span><span class="p">(</span><span class="n">timeout</span> <span class="o">=</span> <span class="bp">None</span><span class="p">)</span>
+
+<span class="c"># Collect the information about where the data is stored</span>
+<span class="n">data_filename</span> <span class="o">=</span> <span class="n">pcvl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get_filename</span><span class="p">()</span>
+<span class="n">dataset_name</span> <span class="o">=</span> <span class="n">pcvl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get_datasetname</span><span class="p">()</span>
+
+<span class="c"># Access the real data through h5py</span>
+<span class="kn">import</span> <span class="nn">h5py</span>
+<span class="n">h5file</span> <span class="o">=</span> <span class="n">h5py</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">data_filename</span><span class="p">,</span> <span class="s">&#39;rw&#39;</span><span class="p">)</span>
+<span class="n">dset</span> <span class="o">=</span> <span class="n">h5file</span><span class="p">[</span><span class="n">dataset_name</span><span class="p">]</span>
+
+<span class="k">print</span> <span class="s">&quot;Acquire dataset dimensions: &quot;</span><span class="p">,</span> <span class="n">dset</span><span class="o">.</span><span class="n">shape</span> 
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -70,6 +135,17 @@ View.</p>
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/PERCIVAL-logo.jpg" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">User Guide</a><ul>
+<li><a class="reference internal" href="#getting-started-simple-scan">Getting started: simple scan</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="installation.html"
                         title="previous chapter">Installation instructions</a></p>
