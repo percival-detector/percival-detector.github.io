@@ -1,0 +1,3 @@
+[submodule "percivalui"]
+	path = percivalui
+	url = https://github.com/percival-detector/percivalui.git
