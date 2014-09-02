@@ -23,8 +23,8 @@ user interface to the Percival detector in the form of a python class/object.
 .. toctree::
    :maxdepth: 4
 
-   percivalui/detector
-   percivalui/percivalui
+   percivalui/docs/detector
+   percivalui/docs/percivalui
 
 
 Indices and tables

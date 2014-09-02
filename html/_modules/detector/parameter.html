@@ -87,7 +87,7 @@
     <span class="k">pass</span>
 
 
-<div class="viewcode-block" id="Observable"><a class="viewcode-back" href="../../percivalui/detector.html#detector.parameter.Observable">[docs]</a><span class="k">class</span> <span class="nc">Observable</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Observable"><a class="viewcode-back" href="../../percivalui/docs/detector.html#detector.parameter.Observable">[docs]</a><span class="k">class</span> <span class="nc">Observable</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;An observable implemented as a `python Descriptor &lt;https://docs.python.org/2/howto/descriptor.html&gt;`_.</span>
 <span class="sd">    </span>
 <span class="sd">    Use the :func:`Observable.subscribe` to register for notification updates. </span>
@@ -113,7 +113,7 @@
             <span class="nb">setattr</span><span class="p">(</span><span class="n">inst</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">var_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">observable_value</span><span class="p">())</span>
         <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">inst</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">var_name</span><span class="p">)</span>
     
-<div class="viewcode-block" id="Observable.subscribe"><a class="viewcode-back" href="../../percivalui/detector.html#detector.parameter.Observable.subscribe">[docs]</a>    <span class="k">def</span> <span class="nf">subscribe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obsv</span><span class="p">,</span> <span class="n">exception_handler</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Observable.subscribe"><a class="viewcode-back" href="../../percivalui/docs/detector.html#detector.parameter.Observable.subscribe">[docs]</a>    <span class="k">def</span> <span class="nf">subscribe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obsv</span><span class="p">,</span> <span class="n">exception_handler</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Add a subscriber to be notified on change of value in the Observable.</span>
 <span class="sd">        </span>
 <span class="sd">        :param obsv: Observer to be notified of change.</span>
@@ -205,7 +205,7 @@
         <span class="k">def</span> <span class="nf">_cancel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wref</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">subscribers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">wref</span><span class="p">)</span>
     
-<div class="viewcode-block" id="Observable._NotifySubscription"><a class="viewcode-back" href="../../percivalui/detector.html#detector.parameter.Observable._NotifySubscription">[docs]</a>    <span class="k">class</span> <span class="nc">_NotifySubscription</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Observable._NotifySubscription"><a class="viewcode-back" href="../../percivalui/docs/detector.html#detector.parameter.Observable._NotifySubscription">[docs]</a>    <span class="k">class</span> <span class="nc">_NotifySubscription</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;A subscription class which cancels the notifications to the subscriber</span>
 <span class="sd">           when instances of this class are finalised.</span>
 <span class="sd">           </span>

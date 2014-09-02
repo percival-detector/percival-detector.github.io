@@ -23,4 +23,4 @@ to achieve this with a single loop. The basic steps include:
 * Request the details of where the dataset was stored.
 * Open dataset and start processing.
 
-.. literalinclude:: ../percivalui/docs/simplescan_example.py
+.. literalinclude:: percivalui/docs/simplescan_example.py

@@ -61,40 +61,40 @@
 <span class="kn">from</span> <span class="nn">detector.interface</span> <span class="kn">import</span> <span class="n">IDetector</span><span class="p">,</span> <span class="n">IControl</span><span class="p">,</span> <span class="n">IData</span>
 
  
-<div class="viewcode-block" id="DACs"><a class="viewcode-back" href="../../percivalui/percivalui.html#percivalui.percival.DACs">[docs]</a><span class="k">class</span> <span class="nc">DACs</span><span class="p">:</span>
+<div class="viewcode-block" id="DACs"><a class="viewcode-back" href="../../percivalui/docs/percivalui.html#percivalui.percival.DACs">[docs]</a><span class="k">class</span> <span class="nc">DACs</span><span class="p">:</span>
     <span class="n">some_gain</span> <span class="o">=</span> <span class="n">detector</span><span class="o">.</span><span class="n">parameter</span><span class="o">.</span><span class="n">Observable</span><span class="p">(</span><span class="s">&#39;some_gain&#39;</span><span class="p">)</span>
 </div>
-<div class="viewcode-block" id="CarrierBoard"><a class="viewcode-back" href="../../percivalui/percivalui.html#percivalui.percival.CarrierBoard">[docs]</a><span class="k">class</span> <span class="nc">CarrierBoard</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="CarrierBoard"><a class="viewcode-back" href="../../percivalui/docs/percivalui.html#percivalui.percival.CarrierBoard">[docs]</a><span class="k">class</span> <span class="nc">CarrierBoard</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">]))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dacs</span> <span class="o">=</span> <span class="n">DACs</span>
 </div>
-<div class="viewcode-block" id="MezzanineBoard"><a class="viewcode-back" href="../../percivalui/percivalui.html#percivalui.percival.MezzanineBoard">[docs]</a><span class="k">class</span> <span class="nc">MezzanineBoard</span><span class="p">(</span><span class="n">IData</span><span class="p">):</span>
+<div class="viewcode-block" id="MezzanineBoard"><a class="viewcode-back" href="../../percivalui/docs/percivalui.html#percivalui.percival.MezzanineBoard">[docs]</a><span class="k">class</span> <span class="nc">MezzanineBoard</span><span class="p">(</span><span class="n">IData</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">]))</span>
         
     <span class="c">### Implemetation of the IData interface ###</span>
     <span class="n">_filename</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
-<div class="viewcode-block" id="MezzanineBoard.get_filename"><a class="viewcode-back" href="../../percivalui/percivalui.html#percivalui.percival.MezzanineBoard.get_filename">[docs]</a>    <span class="k">def</span> <span class="nf">get_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MezzanineBoard.get_filename"><a class="viewcode-back" href="../../percivalui/docs/percivalui.html#percivalui.percival.MezzanineBoard.get_filename">[docs]</a>    <span class="k">def</span> <span class="nf">get_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span></div>
-<div class="viewcode-block" id="MezzanineBoard.set_filename"><a class="viewcode-back" href="../../percivalui/percivalui.html#percivalui.percival.MezzanineBoard.set_filename">[docs]</a>    <span class="k">def</span> <span class="nf">set_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fname</span><span class="p">):</span>
+<div class="viewcode-block" id="MezzanineBoard.set_filename"><a class="viewcode-back" href="../../percivalui/docs/percivalui.html#percivalui.percival.MezzanineBoard.set_filename">[docs]</a>    <span class="k">def</span> <span class="nf">set_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fname</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="n">fname</span></div>
     <span class="n">filename</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">get_filename</span><span class="p">,</span> <span class="n">set_filename</span><span class="p">)</span>
     
     <span class="n">_datasetname</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
-<div class="viewcode-block" id="MezzanineBoard.get_datasetname"><a class="viewcode-back" href="../../percivalui/percivalui.html#percivalui.percival.MezzanineBoard.get_datasetname">[docs]</a>    <span class="k">def</span> <span class="nf">get_datasetname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MezzanineBoard.get_datasetname"><a class="viewcode-back" href="../../percivalui/docs/percivalui.html#percivalui.percival.MezzanineBoard.get_datasetname">[docs]</a>    <span class="k">def</span> <span class="nf">get_datasetname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_datasetname</span></div>
-<div class="viewcode-block" id="MezzanineBoard.set_datasetname"><a class="viewcode-back" href="../../percivalui/percivalui.html#percivalui.percival.MezzanineBoard.set_datasetname">[docs]</a>    <span class="k">def</span> <span class="nf">set_datasetname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MezzanineBoard.set_datasetname"><a class="viewcode-back" href="../../percivalui/docs/percivalui.html#percivalui.percival.MezzanineBoard.set_datasetname">[docs]</a>    <span class="k">def</span> <span class="nf">set_datasetname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_datasetname</span></div>
     <span class="n">datasetname</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">get_datasetname</span><span class="p">,</span> <span class="n">set_datasetname</span><span class="p">)</span>
 
-<div class="viewcode-block" id="MezzanineBoard.start_capture"><a class="viewcode-back" href="../../percivalui/percivalui.html#percivalui.percival.MezzanineBoard.start_capture">[docs]</a>    <span class="k">def</span> <span class="nf">start_capture</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">nframes</span><span class="p">):</span>
+<div class="viewcode-block" id="MezzanineBoard.start_capture"><a class="viewcode-back" href="../../percivalui/docs/percivalui.html#percivalui.percival.MezzanineBoard.start_capture">[docs]</a>    <span class="k">def</span> <span class="nf">start_capture</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">nframes</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Implements interface: :func:`detector.interface.IData.start_capture()`</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span>
     </div>
-<div class="viewcode-block" id="MezzanineBoard.wait_complete"><a class="viewcode-back" href="../../percivalui/percivalui.html#percivalui.percival.MezzanineBoard.wait_complete">[docs]</a>    <span class="k">def</span> <span class="nf">wait_complete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="p">):</span>
+<div class="viewcode-block" id="MezzanineBoard.wait_complete"><a class="viewcode-back" href="../../percivalui/docs/percivalui.html#percivalui.percival.MezzanineBoard.wait_complete">[docs]</a>    <span class="k">def</span> <span class="nf">wait_complete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Implements interface: :func:`detector.interface.IData.wait_complete()`</span>
 <span class="sd">        &#39;&#39;&#39;</span>
@@ -102,7 +102,7 @@
 <span class="c">### End of implemetation of the IData interface ###</span>
 
 </div></div>
-<div class="viewcode-block" id="PercivalUI"><a class="viewcode-back" href="../../percivalui/percivalui.html#percivalui.percival.PercivalUI">[docs]</a><span class="k">class</span> <span class="nc">PercivalUI</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="PercivalUI"><a class="viewcode-back" href="../../percivalui/docs/percivalui.html#percivalui.percival.PercivalUI">[docs]</a><span class="k">class</span> <span class="nc">PercivalUI</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    classdocs</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -116,7 +116,7 @@
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">]))</span>
         
-<div class="viewcode-block" id="PercivalUI.acquire"><a class="viewcode-back" href="../../percivalui/percivalui.html#percivalui.percival.PercivalUI.acquire">[docs]</a>    <span class="k">def</span> <span class="nf">acquire</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exposure</span><span class="p">,</span> <span class="n">nframes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">whatnot</span> <span class="o">=</span> <span class="mi">2</span><span class="p">):</span>
+<div class="viewcode-block" id="PercivalUI.acquire"><a class="viewcode-back" href="../../percivalui/docs/percivalui.html#percivalui.percival.PercivalUI.acquire">[docs]</a>    <span class="k">def</span> <span class="nf">acquire</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exposure</span><span class="p">,</span> <span class="n">nframes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">whatnot</span> <span class="o">=</span> <span class="mi">2</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Start the detector acquiring data</span>
 <span class="sd">        &#39;&#39;&#39;</span>
