@@ -10,8 +10,8 @@ The Percival detector project software documentation is maintained on these page
 
 Introduction...
 
-Table of Content
-----------------
+Guides and manuals
+------------------
 
 .. toctree::
    :maxdepth: 3
@@ -20,9 +20,18 @@ Table of Content
    installation
    userguide
    
+Developers Documentation
+------------------------
+
+The Percival software project comprise a number of software packages, designed to
+support the different aspects of running the Percival detector system. The packages
+are carefully designed to be as de-coupled as possible due to the nature of developing
+across multiple teams.
+
+The following sections collect the developers documentation into one central area.
 
 PercivalUI Python documentation
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The PercivalUI module contains python packages which are used to provide a
 user interface to the Percival detector in the form of a python class/object.
@@ -30,9 +39,23 @@ user interface to the Percival detector in the form of a python class/object.
 .. toctree::
    :maxdepth: 4
 
-   percivalui/docs/detector
    percivalui/docs/percivalui
+   percivalui/docs/detector
 
+Frame Grabber documentation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The frame grabber application operate as a service on each of the compute nodes,
+capturing incoming image frames from the hardware boards and distribute them into
+FIFO buffers, which are then read by the processing applications.
+
+Frame Processing applications
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The live processing applications run on each of the compute nodes, processing data
+from FIFO buffers (filled by the Frame Grabber) and eventually write the resulting
+frames out to HDF5 files.
+ 
 
 Indices and tables
 ==================

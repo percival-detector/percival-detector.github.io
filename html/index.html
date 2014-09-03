@@ -54,8 +54,8 @@
 <h1>Percival Software documentation<a class="headerlink" href="#percival-software-documentation" title="Permalink to this headline">¶</a></h1>
 <p>The Percival detector project software documentation is maintained on these pages.</p>
 <p>Introduction...</p>
-<div class="section" id="table-of-content">
-<h2>Table of Content<a class="headerlink" href="#table-of-content" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="guides-and-manuals">
+<h2>Guides and manuals<a class="headerlink" href="#guides-and-manuals" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">System Overview</a></li>
@@ -68,8 +68,15 @@
 </ul>
 </div>
 </div>
+<div class="section" id="developers-documentation">
+<h2>Developers Documentation<a class="headerlink" href="#developers-documentation" title="Permalink to this headline">¶</a></h2>
+<p>The Percival software project comprise a number of software packages, designed to
+support the different aspects of running the Percival detector system. The packages
+are carefully designed to be as de-coupled as possible due to the nature of developing
+across multiple teams.</p>
+<p>The following sections collect the developers documentation into one central area.</p>
 <div class="section" id="percivalui-python-documentation">
-<h2>PercivalUI Python documentation<a class="headerlink" href="#percivalui-python-documentation" title="Permalink to this headline">¶</a></h2>
+<h3>PercivalUI Python documentation<a class="headerlink" href="#percivalui-python-documentation" title="Permalink to this headline">¶</a></h3>
 <p>The PercivalUI module contains python packages which are used to provide a
 user interface to the Percival detector in the form of a python class/object.</p>
 <div class="toctree-wrapper compound">
@@ -99,6 +106,19 @@ user interface to the Percival detector in the form of a python class/object.</p
 </ul>
 </div>
 </div>
+<div class="section" id="frame-grabber-documentation">
+<h3>Frame Grabber documentation<a class="headerlink" href="#frame-grabber-documentation" title="Permalink to this headline">¶</a></h3>
+<p>The frame grabber application operate as a service on each of the compute nodes,
+capturing incoming image frames from the hardware boards and distribute them into
+FIFO buffers, which are then read by the processing applications.</p>
+</div>
+<div class="section" id="frame-processing-applications">
+<h3>Frame Processing applications<a class="headerlink" href="#frame-processing-applications" title="Permalink to this headline">¶</a></h3>
+<p>The live processing applications run on each of the compute nodes, processing data
+from FIFO buffers (filled by the Frame Grabber) and eventually write the resulting
+frames out to HDF5 files.</p>
+</div>
+</div>
 </div>
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
@@ -121,10 +141,15 @@ user interface to the Percival detector in the form of a python class/object.</p
   <h3><a href="#">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Percival Software documentation</a><ul>
-<li><a class="reference internal" href="#table-of-content">Table of Content</a><ul>
+<li><a class="reference internal" href="#guides-and-manuals">Guides and manuals</a><ul>
 </ul>
 </li>
+<li><a class="reference internal" href="#developers-documentation">Developers Documentation</a><ul>
 <li><a class="reference internal" href="#percivalui-python-documentation">PercivalUI Python documentation</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#frame-grabber-documentation">Frame Grabber documentation</a></li>
+<li><a class="reference internal" href="#frame-processing-applications">Frame Processing applications</a></li>
 </ul>
 </li>
 </ul>
