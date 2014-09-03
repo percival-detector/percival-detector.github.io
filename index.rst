@@ -3,18 +3,25 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Percival Software documentation 
+Percival Software documentation
 ===============================
 
 The Percival detector project software documentation is maintained on these pages.
 
+Introduction...
+
+Table of Content
+----------------
+
 .. toctree::
    :maxdepth: 3
 
+   architecture
    installation
    userguide
+   
 
-PercivalUI Python documentation 
+PercivalUI Python documentation
 -------------------------------
 
 The PercivalUI module contains python packages which are used to provide a
@@ -23,8 +30,8 @@ user interface to the Percival detector in the form of a python class/object.
 .. toctree::
    :maxdepth: 4
 
-   percivalui/docs/detector
    percivalui/docs/percivalui
+   percivalui/docs/detector
 
 
 Indices and tables

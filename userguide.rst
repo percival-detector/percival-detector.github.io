@@ -9,6 +9,7 @@ Cover topics:
 * Scan.
 * Process.
 * View.
+* Using with DAWN
 
 Getting started: simple scan
 ----------------------------
@@ -24,3 +25,12 @@ to achieve this with a single loop. The basic steps include:
 * Open dataset and start processing.
 
 .. literalinclude:: percivalui/docs/simplescan_example.py
+
+PercivalUI in DAWN
+------------------
+
+* Configuring dawn to pick up the python packages.
+* Acquire data
+* Plot results
+* Example scan
+
