@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>percival.detector.interface &mdash; Percival 0.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Percival 0.0.0 documentation" href="../../../index.html"/>
+        <link rel="up" title="Module code" href="../../index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../../../index.html" class="icon icon-home"> Percival
+        
+
+        
+          
+          <img src="../../../_static/PERCIVAL-logo.jpg" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../architecture.html">System Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../userguide.html">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../userguide.html#getting-started-simple-scan">Getting started: simple scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../userguide.html#percivalui-in-dawn">PercivalUI in DAWN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../frame-receiver.html">Frame Receiver</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../frame-receiver.html#api-reference-documentation">API Reference Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference-percivalui.html">Percival Python API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../percivalui/docs/percival.html">Percival Python User Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/percival.html#percival-package"><code class="docutils literal"><span class="pre">percival</span></code> package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/percival.html#percival-percivalui-module"><code class="docutils literal"><span class="pre">percival.percivalui</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../percivalui/docs/detector.html">detector Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/detector.html#percival-detector-package"><code class="docutils literal"><span class="pre">percival.detector</span></code> package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/detector.html#percival-detector-interface-module"><code class="docutils literal"><span class="pre">percival.detector.interface</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/detector.html#idetector-interface"><code class="docutils literal"><span class="pre">IDetector</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/detector.html#icontrol-interface"><code class="docutils literal"><span class="pre">IControl</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/detector.html#idata-interface"><code class="docutils literal"><span class="pre">IData</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/detector.html#iparameter-interface"><code class="docutils literal"><span class="pre">IParameter</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/detector.html#iabcmeta-mix-in"><code class="docutils literal"><span class="pre">IABCMeta</span></code> mix-in</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/detector.html#example-use-of-interfaces">Example use of interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/detector.html#percival-detector-parameter-module"><code class="docutils literal"><span class="pre">percival.detector.parameter</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/detector.html#observable"><code class="docutils literal"><span class="pre">Observable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../percivalui/docs/carrier.html">carrier Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/carrier.html#percival-carrier-package"><code class="docutils literal"><span class="pre">percival.carrier</span></code> package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/carrier.html#percival-carrier-devices-module"><code class="docutils literal"><span class="pre">percival.carrier.devices</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/carrier.html#idevicesettings-interface"><code class="docutils literal"><span class="pre">IDeviceSettings</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/carrier.html#devicesettings-base-class"><code class="docutils literal"><span class="pre">DeviceSettings</span></code> base class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/carrier.html#mapfield"><code class="docutils literal"><span class="pre">MapField</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Percival</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      
+    <li>percival.detector.interface</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for percival.detector.interface</h1><div class="highlight"><pre>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">The detector interface module contains a number of abstract interface definitions</span>
+<span class="sd">which are to be implemented by classes that support control and communication</span>
+<span class="sd">with detectors.</span>
+
+<span class="sd">The interface classes do not implement any real functionality, but are used to define</span>
+<span class="sd">the methods (and their args) and properties, required to support a certain</span>
+<span class="sd">interface.</span>
+
+<span class="sd">The interface classes rely on the python :mod:`abc` module to support Abstract Base</span>
+<span class="sd">Classes</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">unicode_literals</span><span class="p">,</span> <span class="n">absolute_import</span>
+<span class="kn">from</span> <span class="nn">future.utils</span> <span class="kn">import</span> <span class="n">with_metaclass</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">abc</span>
+<span class="kn">from</span> <span class="nn">inspect</span> <span class="kn">import</span> <span class="n">ismethod</span><span class="p">,</span> <span class="n">getargspec</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">parameter</span>
+
+<div class="viewcode-block" id="IABCMeta"><a class="viewcode-back" href="../../../percivalui/docs/detector.html#percival.detector.interface.IABCMeta">[docs]</a><span class="k">class</span> <span class="nc">IABCMeta</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Abstract Base Meta Class which implements checking for required methods and</span>
+<span class="sd">    properties, even when the class is not directly subclassed.</span>
+<span class="sd">    The Interface class which uses this metaclass will need to define a property</span>
+<span class="sd">    called :py:attr:`_iface_requirements` which is a list of properties that must be implemented.</span>
+<span class="sd">    </span>
+<span class="sd">    This class is intended to work together with the :py:class:`abc.ABCMeta` class:</span>
+<span class="sd">    Subclass :class:`IABCMeta` into your own class and set the :py:const:`__metaclass__` = :py:class:`abc.ABCMeta`</span>
+<span class="sd">    The :py:meth:`__subclasshook__` will automatically be called when a class</span>
+<span class="sd">    interface need to be verified.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+    <span class="n">_iface_requirements</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="sd">&#39;&#39;&#39;Interface requirements list. The memebers listed here must be implemented </span>
+<span class="sd">       by subclasses&#39;&#39;&#39;</span>
+    
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="IABCMeta.__subclasshook__"><a class="viewcode-back" href="../../../percivalui/docs/detector.html#percival.detector.interface.IABCMeta.__subclasshook__">[docs]</a>    <span class="k">def</span> <span class="nf">__subclasshook__</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Iterate through the :py:attr:`_iface_requirements` list of members and check</span>
+<span class="sd">        whether they are implemented by the current class or parent.</span>
+<span class="sd">        </span>
+<span class="sd">        For requirement functions:</span>
+<span class="sd">        Check if the functions arguments match the required arguments</span>
+<span class="sd">        of the interface function.</span>
+<span class="sd">        </span>
+<span class="sd">        Rules for implementation of interface functions:</span>
+<span class="sd">            1) Must have at least the main (non-defaulted) named args</span>
+<span class="sd">            2) Can extend the list of arguments</span>
+<span class="sd">            </span>
+<span class="sd">        Default value arguments are discouraged in interfaces as the</span>
+<span class="sd">        interface does not implement any functionality. Implementations</span>
+<span class="sd">        can assign default values to the arguments if desired.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">cls</span><span class="o">.</span><span class="n">_iface_requirements</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">NotImplemented</span>
+        
+        <span class="n">checks</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">req</span> <span class="ow">in</span> <span class="n">cls</span><span class="o">.</span><span class="n">_iface_requirements</span><span class="p">:</span>
+            <span class="n">has_req</span> <span class="o">=</span> <span class="nb">any</span><span class="p">(</span><span class="n">req</span> <span class="ow">in</span> <span class="n">B</span><span class="o">.</span><span class="n">__dict__</span> <span class="k">for</span> <span class="n">B</span> <span class="ow">in</span> <span class="n">C</span><span class="o">.</span><span class="n">__mro__</span><span class="p">)</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">has_req</span>
+            <span class="k">if</span> <span class="n">has_req</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">ismethod</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">req</span><span class="p">)):</span>
+                    <span class="c"># Check if the functions arguments match the required arguments</span>
+                    <span class="n">interface_func_args</span> <span class="o">=</span> <span class="n">getargspec</span><span class="p">(</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">req</span><span class="p">)</span> <span class="p">)</span><span class="o">.</span><span class="n">args</span>
+                    <span class="n">impl_func_args</span> <span class="o">=</span> <span class="n">getargspec</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="n">req</span><span class="p">))</span><span class="o">.</span><span class="n">args</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">result</span> <span class="o">=</span> <span class="n">interface_func_args</span> <span class="o">==</span> <span class="n">impl_func_args</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">interface_func_args</span><span class="p">)]</span>
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="n">result</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="n">checks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">False</span> <span class="ow">in</span> <span class="n">checks</span>
+</div></div>
+<div class="viewcode-block" id="IDetector"><a class="viewcode-back" href="../../../percivalui/docs/detector.html#percival.detector.interface.IDetector">[docs]</a><span class="k">class</span> <span class="nc">IDetector</span><span class="p">(</span><span class="n">with_metaclass</span><span class="p">(</span><span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span><span class="p">,</span> <span class="n">IABCMeta</span><span class="p">)):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Abstract Interface to a detector class</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c">#__metaclass__ = abc.ABCMeta</span>
+    <span class="n">__iproperties__</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;exposure&#39;</span><span class="p">]</span>
+    <span class="n">__imethods__</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;acquire&#39;</span><span class="p">]</span>
+    <span class="n">_iface_requirements</span> <span class="o">=</span> <span class="n">__imethods__</span> <span class="o">+</span> <span class="n">__iproperties__</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">exposure</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+    
+    <span class="nd">@abc.abstractmethod</span>
+<div class="viewcode-block" id="IDetector.acquire"><a class="viewcode-back" href="../../../percivalui/docs/detector.html#percival.detector.interface.IDetector.acquire">[docs]</a>    <span class="k">def</span> <span class="nf">acquire</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exposure</span><span class="p">,</span> <span class="n">nframes</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Start the detector acquiring data</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+    </div></div>
+<div class="viewcode-block" id="IParameter"><a class="viewcode-back" href="../../../percivalui/docs/detector.html#percival.detector.interface.IParameter">[docs]</a><span class="k">class</span> <span class="nc">IParameter</span><span class="p">(</span><span class="n">with_metaclass</span><span class="p">(</span><span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span><span class="p">,</span> <span class="nb">object</span><span class="p">)):</span>
+    <span class="sd">&#39;&#39;&#39;Base class interface to describe a detector parameter</span>
+<span class="sd">    </span>
+<span class="sd">    The :obj:`value` object is a :class:`detector.parameter.Observable` instance </span>
+<span class="sd">    to which callbacks can be registerred to provide notification updates</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c">#__metaclass__ = abc.ABCMeta</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">parameter</span><span class="o">.</span><span class="n">Observable</span><span class="p">(</span><span class="s">&#39;value&#39;</span><span class="p">)</span>
+    
+</div>
+<div class="viewcode-block" id="IControl"><a class="viewcode-back" href="../../../percivalui/docs/detector.html#percival.detector.interface.IControl">[docs]</a><span class="k">class</span> <span class="nc">IControl</span><span class="p">(</span><span class="n">with_metaclass</span><span class="p">(</span><span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span><span class="p">,</span> <span class="n">IABCMeta</span><span class="p">)):</span>
+    <span class="c">#__metaclass__ = abc.ABCMeta</span>
+    
+    <span class="nd">@abc.abstractmethod</span>
+    <span class="k">def</span> <span class="nf">start_acquisition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exposure</span><span class="p">,</span> <span class="n">nframes</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+    
+    <span class="nd">@abc.abstractmethod</span>
+    <span class="k">def</span> <span class="nf">stop_acquisition</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+    
+    <span class="nd">@abc.abstractmethod</span>
+    <span class="k">def</span> <span class="nf">get_nframes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+</div>
+<span class="k">class</span> <span class="nc">IData</span><span class="p">(</span><span class="n">with_metaclass</span><span class="p">(</span><span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span><span class="p">,</span> <span class="n">IABCMeta</span><span class="p">)):</span>
+    <span class="c">#__metaclass__ = abc.ABCMeta</span>
+    
+    <span class="k">def</span> <span class="nf">get_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span>
+    <span class="k">def</span> <span class="nf">set_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fname</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">fname</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">abstractproperty</span><span class="p">(</span><span class="n">get_filename</span><span class="p">,</span> <span class="n">set_filename</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">get_datasetname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">datasetname</span>
+    <span class="k">def</span> <span class="nf">set_datasetname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">datasetname</span>
+    <span class="n">datasetname</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">abstractproperty</span><span class="p">(</span><span class="n">get_datasetname</span><span class="p">,</span> <span class="n">set_datasetname</span><span class="p">)</span>
+    
+    <span class="nd">@abc.abstractmethod</span>
+    <span class="k">def</span> <span class="nf">start_capture</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">nframes</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Start capturing data frames into a filename.</span>
+<span class="sd">        </span>
+<span class="sd">        :param filename: Name of file to capture and store frames in.</span>
+<span class="sd">        :param nframes: Numbef of frames, expected to be acquired and stored.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+    
+    <span class="nd">@abc.abstractmethod</span>
+    <span class="k">def</span> <span class="nf">wait_complete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Wait and return once the current capture session has completed.</span>
+<span class="sd">        This function will return when the required number of frames has been captured</span>
+<span class="sd">        into the file - or throw Timeout exception after a timeout.</span>
+<span class="sd">        </span>
+<span class="sd">        :param timeout: Number of seconds to block before timing out.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+    
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Ulrik Kofoed Pedersen, Diamond Light Source Ltd..
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

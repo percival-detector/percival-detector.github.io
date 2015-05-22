@@ -1,86 +1,193 @@
 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>detector Package &mdash; Percival 0.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Percival 0.0.0 documentation" href="../../index.html"/>
+        <link rel="up" title="Percival Python API Reference" href="../../reference-percivalui.html"/>
+        <link rel="next" title="carrier Package" href="carrier.html"/>
+        <link rel="prev" title="Percival Python User Interface" href="percival.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../../index.html" class="icon icon-home"> Percival
+        
+
+        
+          
+          <img src="../../_static/PERCIVAL-logo.jpg" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../architecture.html">System Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../userguide.html">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../userguide.html#getting-started-simple-scan">Getting started: simple scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../userguide.html#percivalui-in-dawn">PercivalUI in DAWN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../frame-receiver.html">Frame Receiver</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../frame-receiver.html#api-reference-documentation">API Reference Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../reference-percivalui.html">Percival Python API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="percival.html">Percival Python User Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="percival.html#percival-package"><code class="docutils literal"><span class="pre">percival</span></code> package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="percival.html#percival-percivalui-module"><code class="docutils literal"><span class="pre">percival.percivalui</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">detector Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#percival-detector-package"><code class="docutils literal"><span class="pre">percival.detector</span></code> package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#percival-detector-interface-module"><code class="docutils literal"><span class="pre">percival.detector.interface</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#idetector-interface"><code class="docutils literal"><span class="pre">IDetector</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#icontrol-interface"><code class="docutils literal"><span class="pre">IControl</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#idata-interface"><code class="docutils literal"><span class="pre">IData</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iparameter-interface"><code class="docutils literal"><span class="pre">IParameter</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iabcmeta-mix-in"><code class="docutils literal"><span class="pre">IABCMeta</span></code> mix-in</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-use-of-interfaces">Example use of interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#percival-detector-parameter-module"><code class="docutils literal"><span class="pre">percival.detector.parameter</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#observable"><code class="docutils literal"><span class="pre">Observable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="carrier.html">carrier Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="carrier.html#percival-carrier-package"><code class="docutils literal"><span class="pre">percival.carrier</span></code> package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="carrier.html#percival-carrier-devices-module"><code class="docutils literal"><span class="pre">percival.carrier.devices</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="carrier.html#idevicesettings-interface"><code class="docutils literal"><span class="pre">IDeviceSettings</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="carrier.html#devicesettings-base-class"><code class="docutils literal"><span class="pre">DeviceSettings</span></code> base class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="carrier.html#mapfield"><code class="docutils literal"><span class="pre">MapField</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Percival</a>
+      </nav>
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>detector Package &mdash; Percival 0.0.0 documentation</title>
-    
-    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Percival 0.0.0 documentation" href="../../index.html" />
-    <link rel="next" title="PercivalUI" href="percivalui.html" />
-    <link rel="prev" title="User Guide" href="../../userguide.html" /> 
-  </head>
-  <body>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="../../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="percivalui.html" title="PercivalUI"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="../../userguide.html" title="User Guide"
-             accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Percival 0.0.0 documentation</a> &raquo;</li> 
-      </ul>
-    </div>  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../reference-percivalui.html">Percival Python API Reference</a> &raquo;</li>
+      
+    <li>detector Package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/percivalui/docs/detector.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
             
   <div class="section" id="detector-package">
 <h1>detector Package<a class="headerlink" href="#detector-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><a class="reference internal" href="#module-detector" title="detector"><tt class="xref py py-mod docutils literal"><span class="pre">detector</span></tt></a> package<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="module-detector"></span><p>The <a class="reference internal" href="#module-detector" title="detector"><tt class="xref py py-mod docutils literal"><span class="pre">detector</span></tt></a> module contain a number of interfaces and base classes 
+<div class="section" id="percival-detector-package">
+<h2><a class="reference internal" href="#module-percival.detector" title="percival.detector"><code class="xref py py-mod docutils literal"><span class="pre">percival.detector</span></code></a> package<a class="headerlink" href="#percival-detector-package" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-percival.detector"></span><p>The <code class="xref py py-mod docutils literal"><span class="pre">detector</span></code> module contain a number of interfaces and base classes 
 to support development of python classes to control imaging detectors.</p>
 </div>
-<div class="section" id="module-detector.interface">
-<span id="interface-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">interface</span></tt> module<a class="headerlink" href="#module-detector.interface" title="Permalink to this headline">¶</a></h2>
-<p>The detector interface module contains a number of abstract interface definitions
+<div class="section" id="percival-detector-interface-module">
+<h2><a class="reference internal" href="#module-percival.detector.interface" title="percival.detector.interface"><code class="xref py py-mod docutils literal"><span class="pre">percival.detector.interface</span></code></a> module<a class="headerlink" href="#percival-detector-interface-module" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-percival.detector.interface"></span><p>The detector interface module contains a number of abstract interface definitions
 which are to be implemented by classes that support control and communication
 with detectors.</p>
 <p>The interface classes do not implement any real functionality, but are used to define
 the methods (and their args) and properties, required to support a certain
 interface.</p>
-<p>The interface classes rely on the python <a class="reference external" href="https://docs.python.org/2.7/library/abc.html#abc" title="(in Python v2.7)"><tt class="xref py py-mod docutils literal"><span class="pre">abc</span></tt></a> module to support Abstract Base
+<p>The interface classes rely on the python <a class="reference external" href="https://docs.python.org/2.7/library/abc.html#module-abc" title="(in Python v2.7)"><code class="xref py py-mod docutils literal"><span class="pre">abc</span></code></a> module to support Abstract Base
 Classes</p>
 <div class="section" id="idetector-interface">
-<h3><a class="reference internal" href="#detector.interface.IDetector" title="detector.interface.IDetector"><tt class="xref py py-class docutils literal"><span class="pre">IDetector</span></tt></a> interface<a class="headerlink" href="#idetector-interface" title="Permalink to this headline">¶</a></h3>
+<h3><a class="reference internal" href="#percival.detector.interface.IDetector" title="percival.detector.interface.IDetector"><code class="xref py py-class docutils literal"><span class="pre">IDetector</span></code></a> interface<a class="headerlink" href="#idetector-interface" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
-<dt id="detector.interface.IDetector">
-<em class="property">class </em><tt class="descclassname">detector.interface.</tt><tt class="descname">IDetector</tt><a class="reference internal" href="../../_modules/detector/interface.html#IDetector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.interface.IDetector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#detector.interface.IABCMeta" title="detector.interface.IABCMeta"><tt class="xref py py-class docutils literal"><span class="pre">detector.interface.IABCMeta</span></tt></a></p>
+<dt id="percival.detector.interface.IDetector">
+<em class="property">class </em><code class="descclassname">percival.detector.interface.</code><code class="descname">IDetector</code><a class="reference internal" href="../../_modules/percival/detector/interface.html#IDetector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percival.detector.interface.IDetector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#percival.detector.interface.IABCMeta" title="percival.detector.interface.IABCMeta"><code class="xref py py-class docutils literal"><span class="pre">percival.detector.interface.IABCMeta</span></code></a></p>
 <p>Abstract Interface to a detector class</p>
 <dl class="method">
-<dt id="detector.interface.IDetector.acquire">
-<tt class="descname">acquire</tt><big>(</big><em>exposure</em>, <em>nframes</em><big>)</big><a class="reference internal" href="../../_modules/detector/interface.html#IDetector.acquire"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.interface.IDetector.acquire" title="Permalink to this definition">¶</a></dt>
+<dt id="percival.detector.interface.IDetector.acquire">
+<code class="descname">acquire</code><span class="sig-paren">(</span><em>exposure</em>, <em>nframes</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/percival/detector/interface.html#IDetector.acquire"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percival.detector.interface.IDetector.acquire" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start the detector acquiring data</p>
 </dd></dl>
 
@@ -88,94 +195,47 @@ Classes</p>
 
 </div>
 <div class="section" id="icontrol-interface">
-<h3><a class="reference internal" href="#detector.interface.IControl" title="detector.interface.IControl"><tt class="xref py py-class docutils literal"><span class="pre">IControl</span></tt></a> interface<a class="headerlink" href="#icontrol-interface" title="Permalink to this headline">¶</a></h3>
+<h3><a class="reference internal" href="#percival.detector.interface.IControl" title="percival.detector.interface.IControl"><code class="xref py py-class docutils literal"><span class="pre">IControl</span></code></a> interface<a class="headerlink" href="#icontrol-interface" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
-<dt id="detector.interface.IControl">
-<em class="property">class </em><tt class="descclassname">detector.interface.</tt><tt class="descname">IControl</tt><a class="reference internal" href="../../_modules/detector/interface.html#IControl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.interface.IControl" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#detector.interface.IABCMeta" title="detector.interface.IABCMeta"><tt class="xref py py-class docutils literal"><span class="pre">detector.interface.IABCMeta</span></tt></a></p>
+<dt id="percival.detector.interface.IControl">
+<em class="property">class </em><code class="descclassname">percival.detector.interface.</code><code class="descname">IControl</code><a class="reference internal" href="../../_modules/percival/detector/interface.html#IControl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percival.detector.interface.IControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#percival.detector.interface.IABCMeta" title="percival.detector.interface.IABCMeta"><code class="xref py py-class docutils literal"><span class="pre">percival.detector.interface.IABCMeta</span></code></a></p>
 </dd></dl>
 
 </div>
 <div class="section" id="idata-interface">
-<h3><a class="reference internal" href="#detector.interface.IData" title="detector.interface.IData"><tt class="xref py py-class docutils literal"><span class="pre">IData</span></tt></a> interface<a class="headerlink" href="#idata-interface" title="Permalink to this headline">¶</a></h3>
-<dl class="class">
-<dt id="detector.interface.IData">
-<em class="property">class </em><tt class="descclassname">detector.interface.</tt><tt class="descname">IData</tt><a class="reference internal" href="../../_modules/detector/interface.html#IData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.interface.IData" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#detector.interface.IABCMeta" title="detector.interface.IABCMeta"><tt class="xref py py-class docutils literal"><span class="pre">detector.interface.IABCMeta</span></tt></a></p>
-<dl class="method">
-<dt id="detector.interface.IData.start_capture">
-<tt class="descname">start_capture</tt><big>(</big><em>filename</em>, <em>nframes</em><big>)</big><a class="reference internal" href="../../_modules/detector/interface.html#IData.start_capture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.interface.IData.start_capture" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start capturing data frames into a filename.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>filename</strong> &#8211; Name of file to capture and store frames in.</li>
-<li><strong>nframes</strong> &#8211; Numbef of frames, expected to be acquired and stored.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="detector.interface.IData.wait_complete">
-<tt class="descname">wait_complete</tt><big>(</big><em>timeout</em><big>)</big><a class="reference internal" href="../../_modules/detector/interface.html#IData.wait_complete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.interface.IData.wait_complete" title="Permalink to this definition">¶</a></dt>
-<dd><p>Wait and return once the current capture session has completed.
-This function will return when the required number of frames has been captured
-into the file - or throw Timeout exception after a timeout.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>timeout</strong> &#8211; Number of seconds to block before timing out.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</dd></dl>
-
+<h3><code class="xref py py-class docutils literal"><span class="pre">IData</span></code> interface<a class="headerlink" href="#idata-interface" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="iparameter-interface">
-<h3><a class="reference internal" href="#detector.interface.IParameter" title="detector.interface.IParameter"><tt class="xref py py-class docutils literal"><span class="pre">IParameter</span></tt></a> interface<a class="headerlink" href="#iparameter-interface" title="Permalink to this headline">¶</a></h3>
+<h3><a class="reference internal" href="#percival.detector.interface.IParameter" title="percival.detector.interface.IParameter"><code class="xref py py-class docutils literal"><span class="pre">IParameter</span></code></a> interface<a class="headerlink" href="#iparameter-interface" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
-<dt id="detector.interface.IParameter">
-<em class="property">class </em><tt class="descclassname">detector.interface.</tt><tt class="descname">IParameter</tt><a class="reference internal" href="../../_modules/detector/interface.html#IParameter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.interface.IParameter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<dt id="percival.detector.interface.IParameter">
+<em class="property">class </em><code class="descclassname">percival.detector.interface.</code><code class="descname">IParameter</code><a class="reference internal" href="../../_modules/percival/detector/interface.html#IParameter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percival.detector.interface.IParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <p>Base class interface to describe a detector parameter</p>
-<p>The <tt class="xref py py-obj docutils literal"><span class="pre">value</span></tt> object is a <a class="reference internal" href="#detector.parameter.Observable" title="detector.parameter.Observable"><tt class="xref py py-class docutils literal"><span class="pre">detector.parameter.Observable</span></tt></a> instance 
+<p>The <code class="xref py py-obj docutils literal"><span class="pre">value</span></code> object is a <code class="xref py py-class docutils literal"><span class="pre">detector.parameter.Observable</span></code> instance 
 to which callbacks can be registerred to provide notification updates</p>
 </dd></dl>
 
 </div>
 <div class="section" id="iabcmeta-mix-in">
-<h3><a class="reference internal" href="#detector.interface.IABCMeta" title="detector.interface.IABCMeta"><tt class="xref py py-class docutils literal"><span class="pre">IABCMeta</span></tt></a> mix-in<a class="headerlink" href="#iabcmeta-mix-in" title="Permalink to this headline">¶</a></h3>
+<h3><a class="reference internal" href="#percival.detector.interface.IABCMeta" title="percival.detector.interface.IABCMeta"><code class="xref py py-class docutils literal"><span class="pre">IABCMeta</span></code></a> mix-in<a class="headerlink" href="#iabcmeta-mix-in" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
-<dt id="detector.interface.IABCMeta">
-<em class="property">class </em><tt class="descclassname">detector.interface.</tt><tt class="descname">IABCMeta</tt><a class="reference internal" href="../../_modules/detector/interface.html#IABCMeta"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.interface.IABCMeta" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<dt id="percival.detector.interface.IABCMeta">
+<em class="property">class </em><code class="descclassname">percival.detector.interface.</code><code class="descname">IABCMeta</code><a class="reference internal" href="../../_modules/percival/detector/interface.html#IABCMeta"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percival.detector.interface.IABCMeta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <p>Abstract Base Meta Class which implements checking for required methods and
 properties, even when the class is not directly subclassed.
 The Interface class which uses this metaclass will need to define a property
-called <a class="reference internal" href="#detector.interface.IABCMeta._iface_requirements" title="detector.interface.IABCMeta._iface_requirements"><tt class="xref py py-attr docutils literal"><span class="pre">_iface_requirements</span></tt></a> which is a list of properties that must be implemented.</p>
-<p>This class is intended to work together with the <a class="reference external" href="https://docs.python.org/2.7/library/abc.html#abc.ABCMeta" title="(in Python v2.7)"><tt class="xref py py-class docutils literal"><span class="pre">abc.ABCMeta</span></tt></a> class:
-Subclass <a class="reference internal" href="#detector.interface.IABCMeta" title="detector.interface.IABCMeta"><tt class="xref py py-class docutils literal"><span class="pre">IABCMeta</span></tt></a> into your own class and set the <tt class="xref py py-const docutils literal"><span class="pre">__metaclass__</span></tt> = <a class="reference external" href="https://docs.python.org/2.7/library/abc.html#abc.ABCMeta" title="(in Python v2.7)"><tt class="xref py py-class docutils literal"><span class="pre">abc.ABCMeta</span></tt></a>
-The <a class="reference internal" href="#detector.interface.IABCMeta.__subclasshook__" title="detector.interface.IABCMeta.__subclasshook__"><tt class="xref py py-meth docutils literal"><span class="pre">__subclasshook__()</span></tt></a> will automatically be called when a class
+called <a class="reference internal" href="#percival.detector.interface.IABCMeta._iface_requirements" title="percival.detector.interface.IABCMeta._iface_requirements"><code class="xref py py-attr docutils literal"><span class="pre">_iface_requirements</span></code></a> which is a list of properties that must be implemented.</p>
+<p>This class is intended to work together with the <a class="reference external" href="https://docs.python.org/2.7/library/abc.html#abc.ABCMeta" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">abc.ABCMeta</span></code></a> class:
+Subclass <a class="reference internal" href="#percival.detector.interface.IABCMeta" title="percival.detector.interface.IABCMeta"><code class="xref py py-class docutils literal"><span class="pre">IABCMeta</span></code></a> into your own class and set the <code class="xref py py-const docutils literal"><span class="pre">__metaclass__</span></code> = <a class="reference external" href="https://docs.python.org/2.7/library/abc.html#abc.ABCMeta" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">abc.ABCMeta</span></code></a>
+The <a class="reference internal" href="#percival.detector.interface.IABCMeta.__subclasshook__" title="percival.detector.interface.IABCMeta.__subclasshook__"><code class="xref py py-meth docutils literal"><span class="pre">__subclasshook__()</span></code></a> will automatically be called when a class
 interface need to be verified.</p>
-<dl class="attribute">
-<dt id="detector.interface.IABCMeta._iface_requirements">
-<tt class="descname">_iface_requirements</tt><em class="property"> = []</em><a class="headerlink" href="#detector.interface.IABCMeta._iface_requirements" title="Permalink to this definition">¶</a></dt>
-<dd><p>Interface requirements list. The memebers listed here must be implemented
-by subclasses</p>
-</dd></dl>
-
 <dl class="classmethod">
-<dt id="detector.interface.IABCMeta.__subclasshook__">
-<em class="property">classmethod </em><tt class="descname">__subclasshook__</tt><big>(</big><em>C</em><big>)</big><a class="reference internal" href="../../_modules/detector/interface.html#IABCMeta.__subclasshook__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.interface.IABCMeta.__subclasshook__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Iterate through the <a class="reference internal" href="#detector.interface.IABCMeta._iface_requirements" title="detector.interface.IABCMeta._iface_requirements"><tt class="xref py py-attr docutils literal"><span class="pre">_iface_requirements</span></tt></a> list of members and check
+<dt id="percival.detector.interface.IABCMeta.__subclasshook__">
+<em class="property">classmethod </em><code class="descname">__subclasshook__</code><span class="sig-paren">(</span><em>C</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/percival/detector/interface.html#IABCMeta.__subclasshook__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percival.detector.interface.IABCMeta.__subclasshook__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate through the <a class="reference internal" href="#percival.detector.interface.IABCMeta._iface_requirements" title="percival.detector.interface.IABCMeta._iface_requirements"><code class="xref py py-attr docutils literal"><span class="pre">_iface_requirements</span></code></a> list of members and check
 whether they are implemented by the current class or parent.</p>
 <p>For requirement functions:
 Check if the functions arguments match the required arguments
@@ -193,81 +253,96 @@ interface does not implement any functionality. Implementations
 can assign default values to the arguments if desired.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="percival.detector.interface.IABCMeta._iface_requirements">
+<code class="descname">_iface_requirements</code><em class="property"> = []</em><a class="headerlink" href="#percival.detector.interface.IABCMeta._iface_requirements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface requirements list. The memebers listed here must be implemented
+by subclasses</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
 <div class="section" id="example-use-of-interfaces">
 <h3>Example use of interfaces<a class="headerlink" href="#example-use-of-interfaces" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">detector.interface</span> <span class="kn">import</span> <span class="n">IDetector</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">unicode_literals</span><span class="p">,</span> <span class="n">print_function</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">pkg_resources</span> <span class="kn">import</span> <span class="n">require</span>
+    <span class="n">require</span><span class="p">(</span><span class="s">&#39;numpy&#39;</span><span class="p">)</span>
+    <span class="n">require</span><span class="p">(</span><span class="s">&#39;future&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">pass</span> <span class="c"># not everyone use setuptools and that is OK...</span>
+
+<span class="kn">from</span> <span class="nn">percival.detector.interface</span> <span class="kn">import</span> <span class="n">IDetector</span>
 
 <span class="k">class</span> <span class="nc">MyDetector</span><span class="p">(</span> <span class="nb">object</span> <span class="p">):</span>
     <span class="n">exposure</span> <span class="o">=</span> <span class="mf">0.1</span>
     <span class="k">def</span> <span class="nf">acquire</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">exposure</span><span class="p">,</span> <span class="n">nframes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dac</span><span class="o">=</span><span class="mi">42</span> <span class="p">):</span>
-        <span class="k">print</span> <span class="s">&quot;Acquiring...&quot;</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Acquiring...&quot;</span><span class="p">)</span>
 
 <span class="c"># Register MyDetector to as implementing the IDetector interface</span>
 <span class="n">IDetector</span><span class="o">.</span><span class="n">register</span><span class="p">(</span> <span class="n">MyDetector</span> <span class="p">)</span>
 
 <span class="c"># Verify the implementation of the IDetector interface in MyDetector</span>
-<span class="k">print</span> <span class="s">&quot;MyDetector provides IDetector: &quot;</span><span class="p">,</span> <span class="nb">issubclass</span><span class="p">(</span> <span class="n">MyDetector</span><span class="p">,</span> <span class="n">IDetector</span> <span class="p">)</span>        
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;MyDetector provides IDetector: &quot;</span><span class="p">,</span> <span class="nb">issubclass</span><span class="p">(</span> <span class="n">MyDetector</span><span class="p">,</span> <span class="n">IDetector</span> <span class="p">))</span>        
 
 <span class="c"># Create an instance of MyDetector</span>
 <span class="n">det</span> <span class="o">=</span> <span class="n">MyDetector</span><span class="p">()</span>
 
 <span class="c"># Verify that the det object implements the IDetector interface</span>
-<span class="k">print</span> <span class="s">&quot;det implements IDetector: &quot;</span><span class="p">,</span> <span class="nb">isinstance</span><span class="p">(</span> <span class="n">det</span><span class="p">,</span> <span class="n">IDetector</span> <span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;det implements IDetector: &quot;</span><span class="p">,</span> <span class="nb">isinstance</span><span class="p">(</span> <span class="n">det</span><span class="p">,</span> <span class="n">IDetector</span> <span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="module-detector.parameter">
-<span id="parameter-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">parameter</span></tt> module<a class="headerlink" href="#module-detector.parameter" title="Permalink to this headline">¶</a></h2>
-<p>Support for observable parameters.
-When using <a class="reference internal" href="#detector.parameter.Observable" title="detector.parameter.Observable"><tt class="xref py py-class docutils literal"><span class="pre">Observable</span></tt></a> it is possible to register observers
+<div class="section" id="percival-detector-parameter-module">
+<h2><a class="reference internal" href="#module-percival.detector.parameter" title="percival.detector.parameter"><code class="xref py py-mod docutils literal"><span class="pre">percival.detector.parameter</span></code></a> module<a class="headerlink" href="#percival-detector-parameter-module" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-percival.detector.parameter"></span><p>Support for observable parameters.
+When using <a class="reference internal" href="#percival.detector.parameter.Observable" title="percival.detector.parameter.Observable"><code class="xref py py-class docutils literal"><span class="pre">Observable</span></code></a> it is possible to register observers
 for notifications (callbacks) on change of data values.</p>
 <p>The implementation is thread safe by using python threading locks.</p>
 <div class="section" id="observable">
-<h3><a class="reference internal" href="#detector.parameter.Observable" title="detector.parameter.Observable"><tt class="xref py py-class docutils literal"><span class="pre">Observable</span></tt></a><a class="headerlink" href="#observable" title="Permalink to this headline">¶</a></h3>
+<h3><a class="reference internal" href="#percival.detector.parameter.Observable" title="percival.detector.parameter.Observable"><code class="xref py py-class docutils literal"><span class="pre">Observable</span></code></a><a class="headerlink" href="#observable" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
-<dt id="detector.parameter.Observable">
-<em class="property">class </em><tt class="descclassname">detector.parameter.</tt><tt class="descname">Observable</tt><big>(</big><em>name</em><big>)</big><a class="reference internal" href="../../_modules/detector/parameter.html#Observable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.parameter.Observable" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<dt id="percival.detector.parameter.Observable">
+<em class="property">class </em><code class="descclassname">percival.detector.parameter.</code><code class="descname">Observable</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/percival/detector/parameter.html#Observable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percival.detector.parameter.Observable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <p>An observable implemented as a <a class="reference external" href="https://docs.python.org/2/howto/descriptor.html">python Descriptor</a>.</p>
-<p>Use the <a class="reference internal" href="#detector.parameter.Observable.subscribe" title="detector.parameter.Observable.subscribe"><tt class="xref py py-func docutils literal"><span class="pre">Observable.subscribe()</span></tt></a> to register for notification updates.</p>
+<p>Use the <a class="reference internal" href="#percival.detector.parameter.Observable.subscribe" title="percival.detector.parameter.Observable.subscribe"><code class="xref py py-func docutils literal"><span class="pre">Observable.subscribe()</span></code></a> to register for notification updates.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Note :</th><td class="field-body">The business logic is deferred to the <tt class="xref py py-class docutils literal"><span class="pre">Observable.__ObservableValue__</span></tt> class
-in <tt class="xref py py-obj docutils literal"><span class="pre">self.observable_value</span></tt>.</td>
+<tr class="field-odd field"><th class="field-name">Note:</th><td class="field-body">The business logic is deferred to the <code class="xref py py-class docutils literal"><span class="pre">Observable.__ObservableValue__</span></code> class
+in <code class="xref py py-obj docutils literal"><span class="pre">self.observable_value</span></code>.</td>
 </tr>
 </tbody>
 </table>
 <dl class="class">
-<dt id="detector.parameter.Observable._NotifySubscription">
-<em class="property">class </em><tt class="descname">_NotifySubscription</tt><big>(</big><em>subscriber</em>, <em>observable</em><big>)</big><a class="reference internal" href="../../_modules/detector/parameter.html#Observable._NotifySubscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.parameter.Observable._NotifySubscription" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<dt id="percival.detector.parameter.Observable._NotifySubscription">
+<em class="property">class </em><code class="descname">_NotifySubscription</code><span class="sig-paren">(</span><em>subscriber</em>, <em>observable</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/percival/detector/parameter.html#Observable._NotifySubscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percival.detector.parameter.Observable._NotifySubscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <p>A subscription class which cancels the notifications to the subscriber
 when instances of this class are finalised.</p>
 <p>There is no need to directly instansiate or operate on insatances of this class.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="detector.parameter.Observable.subscribe">
-<tt class="descclassname">Observable.</tt><tt class="descname">subscribe</tt><big>(</big><em>obsv</em>, <em>exception_handler=None</em><big>)</big><a class="reference internal" href="../../_modules/detector/parameter.html#Observable.subscribe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#detector.parameter.Observable.subscribe" title="Permalink to this definition">¶</a></dt>
+<dt id="percival.detector.parameter.Observable.subscribe">
+<code class="descclassname">Observable.</code><code class="descname">subscribe</code><span class="sig-paren">(</span><em>obsv</em>, <em>exception_handler=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/percival/detector/parameter.html#Observable.subscribe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percival.detector.parameter.Observable.subscribe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a subscriber to be notified on change of value in the Observable.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>obsv</strong> (a callable or another <a class="reference internal" href="#detector.parameter.Observable" title="detector.parameter.Observable"><tt class="xref py py-class docutils literal"><span class="pre">Observable</span></tt></a> object. 
+<li><strong>obsv</strong> (a callable or another <a class="reference internal" href="#percival.detector.parameter.Observable" title="percival.detector.parameter.Observable"><code class="xref py py-class docutils literal"><span class="pre">Observable</span></code></a> object. 
 The callable must accept one argument which is the updated value.) &#8211; Observer to be notified of change.</li>
 <li><strong>exception_handler</strong> (<em>callable with one argument which is the raised exception</em>) &#8211; An exception handler or None</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#detector.parameter.Observable._NotifySubscription" title="detector.parameter.Observable._NotifySubscription"><tt class="xref py py-class docutils literal"><span class="pre">Observable._NotifySubscription</span></tt></a> object. Hang on to this object
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#percival.detector.parameter.Observable._NotifySubscription" title="percival.detector.parameter.Observable._NotifySubscription"><code class="xref py py-class docutils literal"><span class="pre">Observable._NotifySubscription</span></code></a> object. Hang on to this object
 for as long as notification updates are required. When this object is finalised,
 the notification updates will be cancelled.</p>
 </td>
@@ -284,83 +359,68 @@ the notification updates will be cancelled.</p>
 
 
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../index.html">
-              <img class="logo" src="../../_static/PERCIVAL-logo.jpg" alt="Logo"/>
-            </a></p>
-  <h3><a href="../../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">detector Package</a><ul>
-<li><a class="reference internal" href="#id1"><tt class="docutils literal"><span class="pre">detector</span></tt> package</a></li>
-<li><a class="reference internal" href="#module-detector.interface"><tt class="docutils literal"><span class="pre">interface</span></tt> module</a><ul>
-<li><a class="reference internal" href="#idetector-interface"><tt class="docutils literal"><span class="pre">IDetector</span></tt> interface</a></li>
-<li><a class="reference internal" href="#icontrol-interface"><tt class="docutils literal"><span class="pre">IControl</span></tt> interface</a></li>
-<li><a class="reference internal" href="#idata-interface"><tt class="docutils literal"><span class="pre">IData</span></tt> interface</a></li>
-<li><a class="reference internal" href="#iparameter-interface"><tt class="docutils literal"><span class="pre">IParameter</span></tt> interface</a></li>
-<li><a class="reference internal" href="#iabcmeta-mix-in"><tt class="docutils literal"><span class="pre">IABCMeta</span></tt> mix-in</a></li>
-<li><a class="reference internal" href="#example-use-of-interfaces">Example use of interfaces</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-detector.parameter"><tt class="docutils literal"><span class="pre">parameter</span></tt> module</a><ul>
-<li><a class="reference internal" href="#observable"><tt class="docutils literal"><span class="pre">Observable</span></tt></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="carrier.html" class="btn btn-neutral float-right" title="carrier Package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="percival.html" class="btn btn-neutral" title="Percival Python User Interface" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="../../userguide.html"
-                        title="previous chapter">User Guide</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="percivalui.html"
-                        title="next chapter">PercivalUI</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/percivalui/docs/detector.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Ulrik Kofoed Pedersen, Diamond Light Source Ltd..
     </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="../../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="percivalui.html" title="PercivalUI"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="../../userguide.html" title="User Guide"
-             >previous</a> |</li>
-        <li><a href="../../index.html">Percival 0.0.0 documentation</a> &raquo;</li> 
-      </ul>
-    </div>
-    <div class="footer">
-        &copy; Copyright 2014, Ulrik Kofoed Pedersen, Diamond Light Source Ltd..
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
-    </div>
-  </body>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
 </html>

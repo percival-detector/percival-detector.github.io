@@ -1,0 +1,371 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>percival.percivalui &mdash; Percival 0.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Percival 0.0.0 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../../index.html" class="icon icon-home"> Percival
+        
+
+        
+          
+          <img src="../../_static/PERCIVAL-logo.jpg" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../architecture.html">System Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../userguide.html">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../userguide.html#getting-started-simple-scan">Getting started: simple scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../userguide.html#percivalui-in-dawn">PercivalUI in DAWN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../frame-receiver.html">Frame Receiver</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../frame-receiver.html#api-reference-documentation">API Reference Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference-percivalui.html">Percival Python API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../percivalui/docs/percival.html">Percival Python User Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../percivalui/docs/percival.html#percival-package"><code class="docutils literal"><span class="pre">percival</span></code> package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../percivalui/docs/percival.html#percival-percivalui-module"><code class="docutils literal"><span class="pre">percival.percivalui</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../percivalui/docs/detector.html">detector Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../percivalui/docs/detector.html#percival-detector-package"><code class="docutils literal"><span class="pre">percival.detector</span></code> package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../percivalui/docs/detector.html#percival-detector-interface-module"><code class="docutils literal"><span class="pre">percival.detector.interface</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../percivalui/docs/detector.html#idetector-interface"><code class="docutils literal"><span class="pre">IDetector</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../percivalui/docs/detector.html#icontrol-interface"><code class="docutils literal"><span class="pre">IControl</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../percivalui/docs/detector.html#idata-interface"><code class="docutils literal"><span class="pre">IData</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../percivalui/docs/detector.html#iparameter-interface"><code class="docutils literal"><span class="pre">IParameter</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../percivalui/docs/detector.html#iabcmeta-mix-in"><code class="docutils literal"><span class="pre">IABCMeta</span></code> mix-in</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../percivalui/docs/detector.html#example-use-of-interfaces">Example use of interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../percivalui/docs/detector.html#percival-detector-parameter-module"><code class="docutils literal"><span class="pre">percival.detector.parameter</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../percivalui/docs/detector.html#observable"><code class="docutils literal"><span class="pre">Observable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../percivalui/docs/carrier.html">carrier Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../percivalui/docs/carrier.html#percival-carrier-package"><code class="docutils literal"><span class="pre">percival.carrier</span></code> package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../percivalui/docs/carrier.html#percival-carrier-devices-module"><code class="docutils literal"><span class="pre">percival.carrier.devices</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../percivalui/docs/carrier.html#idevicesettings-interface"><code class="docutils literal"><span class="pre">IDeviceSettings</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../percivalui/docs/carrier.html#devicesettings-base-class"><code class="docutils literal"><span class="pre">DeviceSettings</span></code> base class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../percivalui/docs/carrier.html#mapfield"><code class="docutils literal"><span class="pre">MapField</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Percival</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      
+    <li>percival.percivalui</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for percival.percivalui</h1><div class="highlight"><pre>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">The main PercivalUI module</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">unicode_literals</span><span class="p">,</span> <span class="n">absolute_import</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">h5py</span>
+
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">percival.detector</span> <span class="kn">as</span> <span class="nn">detector</span>
+<span class="kn">from</span> <span class="nn">percival.detector</span> <span class="kn">import</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">interface</span>
+
+<div class="viewcode-block" id="PercivalSimulator"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.PercivalSimulator">[docs]</a><span class="k">class</span> <span class="nc">PercivalSimulator</span><span class="p">:</span>
+    <span class="c"># This is a singleton</span>
+    <span class="n">__instance</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">def</span> <span class="nf">__new__</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">cls</span><span class="o">.</span><span class="n">__instance</span><span class="p">:</span>
+            <span class="n">cls</span><span class="o">.</span><span class="n">__instance</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">PercivalSimulator</span><span class="p">,</span> <span class="n">cls</span><span class="p">)</span><span class="o">.</span><span class="n">__new__</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">cls</span><span class="o">.</span><span class="n">__instance</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">]))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="bp">None</span>
+        
+<div class="viewcode-block" id="PercivalSimulator.create_data"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.PercivalSimulator.create_data">[docs]</a>    <span class="k">def</span> <span class="nf">create_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dims</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint16</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;creating some data with dtype: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">dtype</span><span class="p">)</span>
+        <span class="n">rand</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">dims</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">issubdtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float</span><span class="p">):</span>
+            <span class="n">factor</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="k">elif</span> <span class="n">np</span><span class="o">.</span><span class="n">issubdtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">integer</span><span class="p">):</span>
+            <span class="n">factor</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">iinfo</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span><span class="o">.</span><span class="n">max</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">factor</span> <span class="o">*</span> <span class="n">rand</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Created data: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        </div>
+<div class="viewcode-block" id="PercivalSimulator.store_data"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.PercivalSimulator.store_data">[docs]</a>    <span class="k">def</span> <span class="nf">store_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="p">,</span> <span class="n">dataset_name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;file_name = </span><span class="si">%s</span><span class="s">, dataset_name = </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">dataset_name</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Data: </span><span class="si">%s</span><span class="s">&quot;</span><span class="o">%</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+        <span class="n">f</span> <span class="o">=</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">(</span><span class="n">dataset_name</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        
+        </div></div>
+<div class="viewcode-block" id="DACs"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.DACs">[docs]</a><span class="k">class</span> <span class="nc">DACs</span><span class="p">:</span>
+    <span class="n">some_gain</span> <span class="o">=</span> <span class="n">detector</span><span class="o">.</span><span class="n">parameter</span><span class="o">.</span><span class="n">Observable</span><span class="p">(</span><span class="s">&#39;some_gain&#39;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="CarrierBoard"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.CarrierBoard">[docs]</a><span class="k">class</span> <span class="nc">CarrierBoard</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">]))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dacs</span> <span class="o">=</span> <span class="n">DACs</span>
+
+    <span class="c">#### IControl interface implementation ####        </span>
+<div class="viewcode-block" id="CarrierBoard.start_acquisition"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.CarrierBoard.start_acquisition">[docs]</a>    <span class="k">def</span> <span class="nf">start_acquisition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exposure</span><span class="p">,</span> <span class="n">nframes</span><span class="p">):</span>
+        <span class="c">#raise NotImplementedError</span>
+        <span class="k">pass</span>
+    </div>
+<div class="viewcode-block" id="CarrierBoard.stop_acquisition"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.CarrierBoard.stop_acquisition">[docs]</a>    <span class="k">def</span> <span class="nf">stop_acquisition</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c">#raise NotImplementedError</span>
+        <span class="k">pass</span>
+    </div>
+<div class="viewcode-block" id="CarrierBoard.get_nframes"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.CarrierBoard.get_nframes">[docs]</a>    <span class="k">def</span> <span class="nf">get_nframes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c">#raise NotImplementedError</span>
+        <span class="k">return</span> <span class="mi">42</span>
+</div>
+<div class="viewcode-block" id="CarrierBoard.powerup_sequence"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.CarrierBoard.powerup_sequence">[docs]</a>    <span class="k">def</span> <span class="nf">powerup_sequence</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+    <span class="c">#### End IControl interface implementation ####        </span>
+</div>
+<div class="viewcode-block" id="CarrierBoard.initialise_fpga"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.CarrierBoard.initialise_fpga">[docs]</a>    <span class="k">def</span> <span class="nf">initialise_fpga</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+</div></div>
+<div class="viewcode-block" id="MezzanineBoard"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.MezzanineBoard">[docs]</a><span class="k">class</span> <span class="nc">MezzanineBoard</span><span class="p">(</span><span class="n">interface</span><span class="o">.</span><span class="n">IData</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Model the hardware Mezzanine Board&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">]))</span>
+        
+    <span class="c">### Implemetation of the IData interface ###</span>
+    <span class="n">_filename</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+<div class="viewcode-block" id="MezzanineBoard.get_filename"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.MezzanineBoard.get_filename">[docs]</a>    <span class="k">def</span> <span class="nf">get_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span></div>
+<div class="viewcode-block" id="MezzanineBoard.set_filename"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.MezzanineBoard.set_filename">[docs]</a>    <span class="k">def</span> <span class="nf">set_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fname</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="n">fname</span></div>
+    <span class="n">filename</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">get_filename</span><span class="p">,</span> <span class="n">set_filename</span><span class="p">)</span>
+    
+    <span class="n">_datasetname</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+<div class="viewcode-block" id="MezzanineBoard.get_datasetname"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.MezzanineBoard.get_datasetname">[docs]</a>    <span class="k">def</span> <span class="nf">get_datasetname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_datasetname</span></div>
+<div class="viewcode-block" id="MezzanineBoard.set_datasetname"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.MezzanineBoard.set_datasetname">[docs]</a>    <span class="k">def</span> <span class="nf">set_datasetname</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_datasetname</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
+    <span class="n">datasetname</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">get_datasetname</span><span class="p">,</span> <span class="n">set_datasetname</span><span class="p">)</span>
+
+<div class="viewcode-block" id="MezzanineBoard.start_capture"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.MezzanineBoard.start_capture">[docs]</a>    <span class="k">def</span> <span class="nf">start_capture</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">nframes</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Implements interface: :func:`detector.interface.IData.start_capture()`</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">sim</span> <span class="o">=</span> <span class="n">PercivalSimulator</span><span class="p">()</span>
+        <span class="n">sim</span><span class="o">.</span><span class="n">create_data</span><span class="p">([</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">datasetname</span> <span class="o">=</span> <span class="s">&#39;data&#39;</span>
+        <span class="n">sim</span><span class="o">.</span><span class="n">store_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">datasetname</span><span class="p">)</span>
+    </div>
+<div class="viewcode-block" id="MezzanineBoard.wait_complete"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.MezzanineBoard.wait_complete">[docs]</a>    <span class="k">def</span> <span class="nf">wait_complete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Implements interface: :func:`detector.interface.IData.wait_complete()`</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c"># TODO: implement proper wait for file saving complete. For the moment we just sleep</span>
+        <span class="n">sleepfor</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="k">if</span> <span class="n">timeout</span> <span class="ow">is</span> <span class="bp">None</span> <span class="k">else</span> <span class="n">timeout</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleepfor</span><span class="p">)</span>
+        
+<span class="c">### End of implemetation of the IData interface ###</span>
+
+</div></div>
+<div class="viewcode-block" id="PercivalUI"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.PercivalUI">[docs]</a><span class="k">class</span> <span class="nc">PercivalUI</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    classdocs</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">exposure</span><span class="o">=</span> <span class="mi">1</span>
+    <span class="n">control</span> <span class="o">=</span> <span class="n">CarrierBoard</span><span class="p">()</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">MezzanineBoard</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Constructor</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">]))</span>
+        
+<div class="viewcode-block" id="PercivalUI.acquire"><a class="viewcode-back" href="../../percivalui/docs/percival.html#percival.percivalui.PercivalUI.acquire">[docs]</a>    <span class="k">def</span> <span class="nf">acquire</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exposure</span><span class="p">,</span> <span class="n">nframes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Start the detector acquiring data</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">control</span><span class="o">.</span><span class="n">start_acquisition</span><span class="p">(</span><span class="n">exposure</span><span class="p">,</span> <span class="n">nframes</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">wait</span><span class="p">:</span>
+            <span class="c"># Cait until acquisition is complete.</span>
+            <span class="c"># Calculate a suitable timeout based on exposure time and number of frames</span>
+            <span class="c"># TODO: for the moment we just fake it with a bit of a sleep here</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">exposure</span> <span class="o">*</span> <span class="n">nframes</span><span class="p">)</span>
+        <span class="n">nframes_acq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">control</span><span class="o">.</span><span class="n">get_nframes</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">nframes_acq</span>
+
+<span class="c"># Register the classes as implementing the relevant interfaces</span></div></div>
+<span class="n">interface</span><span class="o">.</span><span class="n">IControl</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">CarrierBoard</span><span class="p">)</span>
+<span class="n">interface</span><span class="o">.</span><span class="n">IDetector</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">PercivalUI</span><span class="p">)</span>
+<span class="n">interface</span><span class="o">.</span><span class="n">IData</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">MezzanineBoard</span><span class="p">)</span>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Ulrik Kofoed Pedersen, Diamond Light Source Ltd..
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

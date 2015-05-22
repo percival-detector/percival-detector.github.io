@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>carrier Package &mdash; Percival 0.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Percival 0.0.0 documentation" href="../../index.html"/>
+        <link rel="up" title="Percival Python API Reference" href="../../reference-percivalui.html"/>
+        <link rel="prev" title="detector Package" href="detector.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../../index.html" class="icon icon-home"> Percival
+        
+
+        
+          
+          <img src="../../_static/PERCIVAL-logo.jpg" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../architecture.html">System Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../userguide.html">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../userguide.html#getting-started-simple-scan">Getting started: simple scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../userguide.html#percivalui-in-dawn">PercivalUI in DAWN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../frame-receiver.html">Frame Receiver</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../frame-receiver.html#api-reference-documentation">API Reference Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../reference-percivalui.html">Percival Python API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="percival.html">Percival Python User Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="percival.html#percival-package"><code class="docutils literal"><span class="pre">percival</span></code> package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="percival.html#percival-percivalui-module"><code class="docutils literal"><span class="pre">percival.percivalui</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="detector.html">detector Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="detector.html#percival-detector-package"><code class="docutils literal"><span class="pre">percival.detector</span></code> package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="detector.html#percival-detector-interface-module"><code class="docutils literal"><span class="pre">percival.detector.interface</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="detector.html#idetector-interface"><code class="docutils literal"><span class="pre">IDetector</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="detector.html#icontrol-interface"><code class="docutils literal"><span class="pre">IControl</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="detector.html#idata-interface"><code class="docutils literal"><span class="pre">IData</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="detector.html#iparameter-interface"><code class="docutils literal"><span class="pre">IParameter</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="detector.html#iabcmeta-mix-in"><code class="docutils literal"><span class="pre">IABCMeta</span></code> mix-in</a></li>
+<li class="toctree-l4"><a class="reference internal" href="detector.html#example-use-of-interfaces">Example use of interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="detector.html#percival-detector-parameter-module"><code class="docutils literal"><span class="pre">percival.detector.parameter</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="detector.html#observable"><code class="docutils literal"><span class="pre">Observable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">carrier Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#percival-carrier-package"><code class="docutils literal"><span class="pre">percival.carrier</span></code> package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#percival-carrier-devices-module"><code class="docutils literal"><span class="pre">percival.carrier.devices</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#idevicesettings-interface"><code class="docutils literal"><span class="pre">IDeviceSettings</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#devicesettings-base-class"><code class="docutils literal"><span class="pre">DeviceSettings</span></code> base class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mapfield"><code class="docutils literal"><span class="pre">MapField</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Percival</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../reference-percivalui.html">Percival Python API Reference</a> &raquo;</li>
+      
+    <li>carrier Package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/percivalui/docs/carrier.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="carrier-package">
+<h1>carrier Package<a class="headerlink" href="#carrier-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="percival-carrier-package">
+<h2><a class="reference internal" href="#module-percival.carrier" title="percival.carrier"><code class="xref py py-mod docutils literal"><span class="pre">percival.carrier</span></code></a> package<a class="headerlink" href="#percival-carrier-package" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-percival.carrier"></span></div>
+<div class="section" id="percival-carrier-devices-module">
+<h2><a class="reference internal" href="#module-percival.carrier.devices" title="percival.carrier.devices"><code class="xref py py-mod docutils literal"><span class="pre">percival.carrier.devices</span></code></a> module<a class="headerlink" href="#percival-carrier-devices-module" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-percival.carrier.devices"></span><p>Created on 8 May 2015</p>
+<p>&#64;author: Ulrik Pedersen</p>
+<div class="section" id="idevicesettings-interface">
+<h3><a class="reference internal" href="#percival.carrier.devices.IDeviceSettings" title="percival.carrier.devices.IDeviceSettings"><code class="xref py py-class docutils literal"><span class="pre">IDeviceSettings</span></code></a> interface<a class="headerlink" href="#idevicesettings-interface" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="percival.carrier.devices.IDeviceSettings">
+<em class="property">class </em><code class="descclassname">percival.carrier.devices.</code><code class="descname">IDeviceSettings</code><a class="reference internal" href="../../_modules/percival/carrier/devices.html#IDeviceSettings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percival.carrier.devices.IDeviceSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="detector.html#percival.detector.interface.IABCMeta" title="percival.detector.interface.IABCMeta"><code class="xref py py-class docutils literal"><span class="pre">percival.detector.interface.IABCMeta</span></code></a></p>
+<p>Interface to a Device Setting bitmap.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="devicesettings-base-class">
+<h3><a class="reference internal" href="#percival.carrier.devices.DeviceSettings" title="percival.carrier.devices.DeviceSettings"><code class="xref py py-class docutils literal"><span class="pre">DeviceSettings</span></code></a> base class<a class="headerlink" href="#devicesettings-base-class" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="percival.carrier.devices.DeviceSettings">
+<em class="property">class </em><code class="descclassname">percival.carrier.devices.</code><code class="descname">DeviceSettings</code><a class="reference internal" href="../../_modules/percival/carrier/devices.html#DeviceSettings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percival.carrier.devices.DeviceSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Mixin to be used by classes that implement the IDeviceSettings interface</p>
+<dl class="method">
+<dt id="percival.carrier.devices.DeviceSettings.generate_map">
+<code class="descname">generate_map</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/percival/carrier/devices.html#DeviceSettings.generate_map"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percival.carrier.devices.DeviceSettings.generate_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a bitmap from the device MapFields. 
+:returns: a list of 32bit words</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="percival.carrier.devices.DeviceSettings.parse_map">
+<code class="descname">parse_map</code><span class="sig-paren">(</span><em>words</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/percival/carrier/devices.html#DeviceSettings.parse_map"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percival.carrier.devices.DeviceSettings.parse_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse a list of words as a bitmap and write to the relevant internal MapFields</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="mapfield">
+<h3><a class="reference internal" href="#percival.carrier.devices.MapField" title="percival.carrier.devices.MapField"><code class="xref py py-class docutils literal"><span class="pre">MapField</span></code></a><a class="headerlink" href="#mapfield" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="percival.carrier.devices.MapField">
+<em class="property">class </em><code class="descclassname">percival.carrier.devices.</code><code class="descname">MapField</code><span class="sig-paren">(</span><em>name</em>, <em>word_index</em>, <em>num_bits</em>, <em>bit_offset</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/percival/carrier/devices.html#MapField"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#percival.carrier.devices.MapField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="detector.html" class="btn btn-neutral" title="detector Package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Ulrik Kofoed Pedersen, Diamond Light Source Ltd..
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,433 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>percival.carrier.devices &mdash; Percival 0.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Percival 0.0.0 documentation" href="../../../index.html"/>
+        <link rel="up" title="Module code" href="../../index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../../../index.html" class="icon icon-home"> Percival
+        
+
+        
+          
+          <img src="../../../_static/PERCIVAL-logo.jpg" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../architecture.html">System Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../userguide.html">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../userguide.html#getting-started-simple-scan">Getting started: simple scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../userguide.html#percivalui-in-dawn">PercivalUI in DAWN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../frame-receiver.html">Frame Receiver</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../frame-receiver.html#api-reference-documentation">API Reference Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference-percivalui.html">Percival Python API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../percivalui/docs/percival.html">Percival Python User Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/percival.html#percival-package"><code class="docutils literal"><span class="pre">percival</span></code> package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/percival.html#percival-percivalui-module"><code class="docutils literal"><span class="pre">percival.percivalui</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../percivalui/docs/detector.html">detector Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/detector.html#percival-detector-package"><code class="docutils literal"><span class="pre">percival.detector</span></code> package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/detector.html#percival-detector-interface-module"><code class="docutils literal"><span class="pre">percival.detector.interface</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/detector.html#idetector-interface"><code class="docutils literal"><span class="pre">IDetector</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/detector.html#icontrol-interface"><code class="docutils literal"><span class="pre">IControl</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/detector.html#idata-interface"><code class="docutils literal"><span class="pre">IData</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/detector.html#iparameter-interface"><code class="docutils literal"><span class="pre">IParameter</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/detector.html#iabcmeta-mix-in"><code class="docutils literal"><span class="pre">IABCMeta</span></code> mix-in</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/detector.html#example-use-of-interfaces">Example use of interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/detector.html#percival-detector-parameter-module"><code class="docutils literal"><span class="pre">percival.detector.parameter</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/detector.html#observable"><code class="docutils literal"><span class="pre">Observable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../percivalui/docs/carrier.html">carrier Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/carrier.html#percival-carrier-package"><code class="docutils literal"><span class="pre">percival.carrier</span></code> package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/carrier.html#percival-carrier-devices-module"><code class="docutils literal"><span class="pre">percival.carrier.devices</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/carrier.html#idevicesettings-interface"><code class="docutils literal"><span class="pre">IDeviceSettings</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/carrier.html#devicesettings-base-class"><code class="docutils literal"><span class="pre">DeviceSettings</span></code> base class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/carrier.html#mapfield"><code class="docutils literal"><span class="pre">MapField</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Percival</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      
+    <li>percival.carrier.devices</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for percival.carrier.devices</h1><div class="highlight"><pre>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Created on 8 May 2015</span>
+
+<span class="sd">@author: Ulrik Pedersen</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">unicode_literals</span><span class="p">,</span> <span class="n">absolute_import</span>
+<span class="kn">from</span> <span class="nn">future.utils</span> <span class="kn">import</span> <span class="n">with_metaclass</span><span class="p">,</span> <span class="n">raise_with_traceback</span>
+<span class="kn">from</span> <span class="nn">builtins</span> <span class="kn">import</span> <span class="nb">range</span>
+<span class="kn">import</span> <span class="nn">abc</span>
+
+<span class="kn">from</span> <span class="nn">percival.detector.interface</span> <span class="kn">import</span> <span class="n">IABCMeta</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+    
+<div class="viewcode-block" id="DeviceSettings"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.devices.DeviceSettings">[docs]</a><span class="k">class</span> <span class="nc">DeviceSettings</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Mixin to be used by classes that implement the IDeviceSettings interface&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mem_map</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mem_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">raise_with_traceback</span><span class="p">(</span><span class="ne">AttributeError</span><span class="p">(</span><span class="s">&quot;No attribute: </span><span class="si">%s</span><span class="s">&quot;</span><span class="o">%</span><span class="n">name</span><span class="p">))</span>
+    
+    <span class="k">def</span> <span class="nf">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_mem_map</span><span class="p">))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mem_map</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="n">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_mem_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+            
+<div class="viewcode-block" id="DeviceSettings.parse_map"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.devices.DeviceSettings.parse_map">[docs]</a>    <span class="k">def</span> <span class="nf">parse_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">words</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Parse a list of words as a bitmap and write to the relevant internal MapFields&quot;&quot;&quot;</span>
+        <span class="n">map_fields</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">f</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_mem_map</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> 
+                                        <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">key_field</span><span class="p">:</span> <span class="n">key_field</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">word_index</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)]</span> 
+        <span class="k">for</span> <span class="n">map_field</span> <span class="ow">in</span> <span class="n">map_fields</span><span class="p">:</span>
+            <span class="n">map_field</span><span class="o">.</span><span class="n">extract_field_value</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+            </div>
+<div class="viewcode-block" id="DeviceSettings.generate_map"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.devices.DeviceSettings.generate_map">[docs]</a>    <span class="k">def</span> <span class="nf">generate_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Generate a bitmap from the device MapFields. </span>
+<span class="sd">        :returns: a list of 32bit words&quot;&quot;&quot;</span>
+        <span class="n">words</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_words</span><span class="p">))</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;map: </span><span class="si">%s</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_mem_map</span><span class="p">))</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">field</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mem_map</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;field: </span><span class="si">%s</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">field</span><span class="p">))</span>
+            <span class="n">field</span><span class="o">.</span><span class="n">insert_field_value</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;generate_map: words: </span><span class="si">%s</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">words</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">words</span>
+</div></div>
+<div class="viewcode-block" id="MapField"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.devices.MapField">[docs]</a><span class="k">class</span> <span class="nc">MapField</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">word_index</span><span class="p">,</span> <span class="n">num_bits</span><span class="p">,</span> <span class="n">bit_offset</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">]))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_word_index</span> <span class="o">=</span> <span class="n">word_index</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_num_bits</span> <span class="o">=</span> <span class="n">num_bits</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bit_offset</span> <span class="o">=</span> <span class="n">bit_offset</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_value</span> <span class="o">=</span> <span class="bp">None</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">num_bits</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_num_bits</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">bit_offset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bit_offset</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">word_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_word_index</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">mask</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">_num_bits</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bit_offset</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;getting value = </span><span class="si">%s</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_value</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_value</span>
+    <span class="nd">@value.setter</span>
+    <span class="k">def</span> <span class="nf">value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;setting value = </span><span class="si">%s</span><span class="s"> (was = </span><span class="si">%s</span><span class="s">)&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_value</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_value</span> <span class="o">=</span> <span class="n">value</span>
+    
+    <span class="k">def</span> <span class="nf">extract_field_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">words</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_value</span> <span class="o">=</span> <span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_word_index</span><span class="p">]</span> <span class="o">&amp;</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bit_offset</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_value</span>
+    
+    <span class="k">def</span> <span class="nf">insert_field_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">words</span><span class="p">):</span>
+        <span class="c"># Clear the relevant bits in the input word (AND with an inverted mask)</span>
+        <span class="c"># Then set the relevant bit values (value shifted up and OR&#39;ed)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_value</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">raise_with_traceback</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">(</span><span class="s">&quot;No value initialised for field: </span><span class="se">\&#39;</span><span class="si">%s</span><span class="se">\&#39;</span><span class="s">&quot;</span><span class="o">%</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">))</span>
+        <span class="n">words</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_word_index</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_word_index</span><span class="p">]</span> <span class="o">&amp;</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mask</span> <span class="o">^</span> <span class="mi">2</span><span class="o">**</span><span class="mi">32</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="o">|</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_value</span> <span class="o">&lt;&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bit_offset</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s">&quot;&lt;MapField: </span><span class="si">%s</span><span class="s"> word:</span><span class="si">%i</span><span class="s"> offset:</span><span class="si">%i</span><span class="s"> bits:</span><span class="si">%i</span><span class="s"> val:</span><span class="si">%s</span><span class="s">&gt;&quot;</span><span class="o">%</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">,</span> 
+                                                                 <span class="bp">self</span><span class="o">.</span><span class="n">_word_index</span><span class="p">,</span>
+                                                                 <span class="bp">self</span><span class="o">.</span><span class="n">_bit_offset</span><span class="p">,</span>
+                                                                 <span class="bp">self</span><span class="o">.</span><span class="n">_num_bits</span><span class="p">,</span>
+                                                                 <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_value</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">s</span>
+    
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__str__</span><span class="p">()</span>
+</div>
+<span class="k">class</span> <span class="nc">HeaderInfo</span><span class="p">(</span><span class="n">DeviceSettings</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Represent the Header Info register bank&quot;&quot;&quot;</span>
+    <span class="n">num_words</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">_mem_map</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;eeprom_address&quot;</span><span class="p">:</span>               <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;eeprom_address&quot;</span><span class="p">,</span>              <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span>
+                <span class="s">&quot;monitoring_channels_count&quot;</span><span class="p">:</span>    <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;monitoring_channels_count&quot;</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span>  <span class="mi">8</span><span class="p">),</span>
+                <span class="s">&quot;control_channels_count&quot;</span><span class="p">:</span>       <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;control_channels_count&quot;</span><span class="p">,</span>      <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span>  <span class="mi">0</span><span class="p">),</span>
+                <span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">ControlChannel</span><span class="p">(</span><span class="n">DeviceSettings</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Represent the map of Control Channels register bank&quot;&quot;&quot;</span>
+    <span class="n">num_words</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">_mem_map</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;board_type&quot;</span><span class="p">:</span>                   <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;board_type&quot;</span><span class="p">,</span>                  <span class="mi">0</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span> <span class="mi">24</span><span class="p">),</span>
+                <span class="s">&quot;component_family_id&quot;</span><span class="p">:</span>          <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;component_family_id&quot;</span><span class="p">,</span>         <span class="mi">0</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span>
+                <span class="s">&quot;device_i2c_bus_select&quot;</span><span class="p">:</span>        <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;device_i2c_bus_select&quot;</span><span class="p">,</span>       <span class="mi">0</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span> <span class="mi">18</span><span class="p">),</span>
+                <span class="s">&quot;channel_device_id&quot;</span><span class="p">:</span>            <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;channel_device_id&quot;</span><span class="p">,</span>           <span class="mi">0</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span> <span class="mi">13</span><span class="p">),</span>
+                <span class="s">&quot;channel_sub_address&quot;</span><span class="p">:</span>          <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;channel_sub_address&quot;</span><span class="p">,</span>         <span class="mi">0</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">8</span><span class="p">),</span>
+                <span class="s">&quot;device_address&quot;</span><span class="p">:</span>               <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;device_address&quot;</span><span class="p">,</span>              <span class="mi">0</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">0</span><span class="p">),</span> 
+                
+                <span class="s">&quot;channel_range_max&quot;</span><span class="p">:</span>            <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;channel_range_max&quot;</span><span class="p">,</span>           <span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span>
+                <span class="s">&quot;channel_range_min&quot;</span><span class="p">:</span>            <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;channel_range_min&quot;</span><span class="p">,</span>           <span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span>  <span class="mi">0</span><span class="p">),</span>
+                
+                <span class="s">&quot;channel_default_on&quot;</span><span class="p">:</span>           <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;channel_default_on&quot;</span><span class="p">,</span>          <span class="mi">2</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span>
+                <span class="s">&quot;channel_default_off&quot;</span><span class="p">:</span>          <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;channel_default_off&quot;</span><span class="p">,</span>         <span class="mi">2</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span>  <span class="mi">0</span><span class="p">),</span>
+                
+                <span class="c"># These are not yet in use</span>
+                <span class="c">#&quot;channel_monitoring&quot;:           MapField(&quot;channel_monitoring&quot;,          3,  8, 16),</span>
+                <span class="c">#&quot;safety_exception_threshold&quot;:   MapField(&quot;safety_exception_threshold&quot;,  3,  8,  8),</span>
+                <span class="c">#&quot;read_frequency&quot;:               MapField(&quot;read_frequency&quot;,              3,  8,  0),</span>
+
+                <span class="s">&quot;power_status&quot;</span><span class="p">:</span>                 <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;power_status&quot;</span><span class="p">,</span>                <span class="mi">3</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span>
+                <span class="s">&quot;value&quot;</span><span class="p">:</span>                        <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;value&quot;</span><span class="p">,</span>                       <span class="mi">3</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span>  <span class="mi">0</span><span class="p">),</span>
+                <span class="p">}</span>
+
+        
+<span class="k">class</span> <span class="nc">MonitoringChannel</span><span class="p">(</span><span class="n">DeviceSettings</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Represent the map of Monitoring Channel register bank&quot;&quot;&quot;</span>
+    <span class="n">num_words</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">_mem_map</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;board_type&quot;</span><span class="p">:</span>                   <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;board_type&quot;</span><span class="p">,</span>                  <span class="mi">0</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span> <span class="mi">24</span><span class="p">),</span>
+                <span class="s">&quot;component_family_id&quot;</span><span class="p">:</span>          <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;component_family_id&quot;</span><span class="p">,</span>         <span class="mi">0</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span>
+                <span class="s">&quot;device_i2c_bus_select&quot;</span><span class="p">:</span>        <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;device_i2c_bus_select&quot;</span><span class="p">,</span>       <span class="mi">0</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span> <span class="mi">18</span><span class="p">),</span>
+                <span class="s">&quot;channel_device_id&quot;</span><span class="p">:</span>            <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;channel_device_id&quot;</span><span class="p">,</span>           <span class="mi">0</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span> <span class="mi">13</span><span class="p">),</span>
+                <span class="s">&quot;channel_sub_address&quot;</span><span class="p">:</span>          <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;channel_sub_address&quot;</span><span class="p">,</span>         <span class="mi">0</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">8</span><span class="p">),</span>
+                <span class="s">&quot;device_address&quot;</span><span class="p">:</span>               <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;device_address&quot;</span><span class="p">,</span>              <span class="mi">0</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">0</span><span class="p">),</span> 
+                
+                <span class="s">&quot;channel_ext_low_threshold&quot;</span><span class="p">:</span>    <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;channel_ext_low_threshold&quot;</span><span class="p">,</span>   <span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span>
+                <span class="s">&quot;channel_ext_high_threshold&quot;</span><span class="p">:</span>   <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;channel_ext_high_threshold&quot;</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span>  <span class="mi">0</span><span class="p">),</span>
+                
+                <span class="s">&quot;channel_low_threshold&quot;</span><span class="p">:</span>        <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;channel_low_threshold&quot;</span><span class="p">,</span>       <span class="mi">2</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span>
+                <span class="s">&quot;channel_high_threshold&quot;</span><span class="p">:</span>       <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;channel_high_threshold&quot;</span><span class="p">,</span>      <span class="mi">2</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span>  <span class="mi">0</span><span class="p">),</span>
+                
+                <span class="s">&quot;channel_monitoring&quot;</span><span class="p">:</span>           <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;channel_monitoring&quot;</span><span class="p">,</span>          <span class="mi">3</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span>
+                <span class="s">&quot;safety_exception_threshold&quot;</span><span class="p">:</span>   <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;safety_exception_threshold&quot;</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">8</span><span class="p">),</span>
+                <span class="s">&quot;read_frequency&quot;</span><span class="p">:</span>               <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;read_frequency&quot;</span><span class="p">,</span>              <span class="mi">3</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">0</span><span class="p">),</span>
+                <span class="p">}</span>
+    
+<span class="k">class</span> <span class="nc">Command</span><span class="p">(</span><span class="n">DeviceSettings</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Represent the Command register bank:</span>
+<span class="sd">    </span>
+<span class="sd">    Word 0: Device command interface word</span>
+<span class="sd">    Word 1: Sensor command interface word</span>
+<span class="sd">    Word 2: System command interface word</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">num_words</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">object</span><span class="o">.</span><span class="n">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&#39;_mem_map&#39;</span><span class="p">,</span> <span class="p">{})</span> <span class="c"># This prevents infinite recursion when setting attributes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mem_map</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;device_cmd&quot;</span><span class="p">:</span>                   <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;device_cmd&quot;</span><span class="p">,</span>                   <span class="mi">0</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span> <span class="mi">28</span><span class="p">),</span>
+                         <span class="s">&quot;device_type&quot;</span><span class="p">:</span>                  <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;device_type&quot;</span><span class="p">,</span>                  <span class="mi">0</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span> <span class="mi">23</span><span class="p">),</span>
+                         <span class="c">#&quot;eeprom_target&quot;:                MapField(&quot;eeprom_target&quot;,                0,  3, 25),</span>
+                         <span class="s">&quot;device_index&quot;</span><span class="p">:</span>                 <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;device_index&quot;</span><span class="p">,</span>                 <span class="mi">0</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span>  <span class="mi">0</span><span class="p">),</span>
+                
+                         <span class="s">&quot;sensor_cmd&quot;</span><span class="p">:</span>                   <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;sensor_cmd&quot;</span><span class="p">,</span>                   <span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span>  <span class="mi">0</span><span class="p">),</span>
+                         <span class="s">&quot;sensor_cmd_data&quot;</span><span class="p">:</span>              <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;sensor_cmd_data&quot;</span><span class="p">,</span>              <span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span>
+                
+                         <span class="s">&quot;system_cmd&quot;</span><span class="p">:</span>                   <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;system_cmd&quot;</span><span class="p">,</span>                   <span class="mi">2</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span>  <span class="mi">0</span><span class="p">),</span>
+                         <span class="s">&quot;system_cmd_data&quot;</span><span class="p">:</span>              <span class="n">MapField</span><span class="p">(</span><span class="s">&quot;system_cmd_data&quot;</span><span class="p">,</span>              <span class="mi">2</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span>
+                         <span class="p">}</span>
+
+<div class="viewcode-block" id="IDeviceSettings"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.devices.IDeviceSettings">[docs]</a><span class="k">class</span> <span class="nc">IDeviceSettings</span><span class="p">(</span><span class="n">with_metaclass</span><span class="p">(</span><span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span><span class="p">,</span> <span class="n">IABCMeta</span><span class="p">)):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Interface to a Device Setting bitmap.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">__iproperties__</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;num_words&#39;</span><span class="p">,</span> <span class="s">&quot;_mem_map&quot;</span><span class="p">]</span>
+    <span class="n">__imethods__</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;parse_map&#39;</span><span class="p">,</span> <span class="s">&#39;generate_map&#39;</span><span class="p">]</span>
+    <span class="n">_iface_requirements</span> <span class="o">=</span> <span class="n">__imethods__</span> <span class="o">+</span> <span class="n">__iproperties__</span>
+    
+    <span class="nd">@abc.abstractproperty</span>
+    <span class="k">def</span> <span class="nf">num_words</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+    
+    <span class="nd">@abc.abstractproperty</span>
+    <span class="k">def</span> <span class="nf">_mem_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+    
+    <span class="nd">@abc.abstractmethod</span>
+    <span class="k">def</span> <span class="nf">parse_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">words</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+    
+    <span class="nd">@abc.abstractmethod</span>
+    <span class="k">def</span> <span class="nf">generate_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+    
+
+       </div>
+<span class="n">IDeviceSettings</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">HeaderInfo</span><span class="p">)</span>
+<span class="n">IDeviceSettings</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">ControlChannel</span><span class="p">)</span>
+<span class="n">IDeviceSettings</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">MonitoringChannel</span><span class="p">)</span>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Ulrik Kofoed Pedersen, Diamond Light Source Ltd..
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

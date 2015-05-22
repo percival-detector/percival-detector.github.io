@@ -1,58 +1,162 @@
 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>User Guide &mdash; Percival 0.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Percival 0.0.0 documentation" href="index.html"/>
+        <link rel="next" title="Frame Receiver" href="frame-receiver.html"/>
+        <link rel="prev" title="Installation instructions" href="installation.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Percival
+        
+
+        
+          
+          <img src="_static/PERCIVAL-logo.jpg" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">System Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation instructions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started-simple-scan">Getting started: simple scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#percivalui-in-dawn">PercivalUI in DAWN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="frame-receiver.html">Frame Receiver</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="frame-receiver.html#api-reference-documentation">API Reference Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference-percivalui.html">Percival Python API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="percivalui/docs/percival.html">Percival Python User Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="percivalui/docs/percival.html#percival-package"><code class="docutils literal"><span class="pre">percival</span></code> package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="percivalui/docs/percival.html#percival-percivalui-module"><code class="docutils literal"><span class="pre">percival.percivalui</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="percivalui/docs/detector.html">detector Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="percivalui/docs/detector.html#percival-detector-package"><code class="docutils literal"><span class="pre">percival.detector</span></code> package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="percivalui/docs/detector.html#percival-detector-interface-module"><code class="docutils literal"><span class="pre">percival.detector.interface</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="percivalui/docs/detector.html#idetector-interface"><code class="docutils literal"><span class="pre">IDetector</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="percivalui/docs/detector.html#icontrol-interface"><code class="docutils literal"><span class="pre">IControl</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="percivalui/docs/detector.html#idata-interface"><code class="docutils literal"><span class="pre">IData</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="percivalui/docs/detector.html#iparameter-interface"><code class="docutils literal"><span class="pre">IParameter</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="percivalui/docs/detector.html#iabcmeta-mix-in"><code class="docutils literal"><span class="pre">IABCMeta</span></code> mix-in</a></li>
+<li class="toctree-l4"><a class="reference internal" href="percivalui/docs/detector.html#example-use-of-interfaces">Example use of interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="percivalui/docs/detector.html#percival-detector-parameter-module"><code class="docutils literal"><span class="pre">percival.detector.parameter</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="percivalui/docs/detector.html#observable"><code class="docutils literal"><span class="pre">Observable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="percivalui/docs/carrier.html">carrier Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="percivalui/docs/carrier.html#percival-carrier-package"><code class="docutils literal"><span class="pre">percival.carrier</span></code> package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="percivalui/docs/carrier.html#percival-carrier-devices-module"><code class="docutils literal"><span class="pre">percival.carrier.devices</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="percivalui/docs/carrier.html#idevicesettings-interface"><code class="docutils literal"><span class="pre">IDeviceSettings</span></code> interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="percivalui/docs/carrier.html#devicesettings-base-class"><code class="docutils literal"><span class="pre">DeviceSettings</span></code> base class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="percivalui/docs/carrier.html#mapfield"><code class="docutils literal"><span class="pre">MapField</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Percival</a>
+      </nav>
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>User Guide &mdash; Percival 0.0.0 documentation</title>
-    
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
-        VERSION:     '0.0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Percival 0.0.0 documentation" href="index.html" />
-    <link rel="next" title="PercivalUI" href="percivalui/docs/percivalui.html" />
-    <link rel="prev" title="Installation instructions" href="installation.html" /> 
-  </head>
-  <body>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="percivalui/docs/percivalui.html" title="PercivalUI"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="installation.html" title="Installation instructions"
-             accesskey="P">previous</a> |</li>
-        <li><a href="index.html">Percival 0.0.0 documentation</a> &raquo;</li> 
-      </ul>
-    </div>  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>User Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/userguide.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
             
   <div class="section" id="user-guide">
 <h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h1>
@@ -71,8 +175,8 @@
 <p>A scan of a DAC parameter is a relatively simple task. The following demonstrate how
 to achieve this with a single loop. The basic steps include:</p>
 <ul class="simple">
-<li>Instansiate a <a class="reference internal" href="percivalui/docs/percivalui.html#percivalui.percival.PercivalUI" title="percivalui.percival.PercivalUI"><tt class="xref py py-class docutils literal"><span class="pre">percivalui.percival.PercivalUI</span></tt></a> object.</li>
-<li>Configure the <a class="reference internal" href="percivalui/docs/percivalui.html#percivalui.percival.PercivalUI.data" title="percivalui.percival.PercivalUI.data"><tt class="xref py py-obj docutils literal"><span class="pre">percivalui.percival.PercivalUI.data</span></tt></a> instance to capture data into a file.</li>
+<li>Instansiate a <code class="xref py py-class docutils literal"><span class="pre">percivalui.percival.PercivalUI</span></code> object.</li>
+<li>Configure the <code class="xref py py-obj docutils literal"><span class="pre">percivalui.percival.PercivalUI.data</span></code> instance to capture data into a file.</li>
 <li>Scan through a list of DAC values, and for each value command an acquisition of N frames.</li>
 <li>Wait for file saving to complete.</li>
 <li>Request the details of where the dataset was stored.</li>
@@ -85,7 +189,20 @@ to achieve this with a single loop. The basic steps include:</p>
 <span class="sd">parameter while acquiring samples off the detector.</span>
 <span class="sd">&#39;&#39;&#39;</span>
 
-<span class="kn">from</span> <span class="nn">percivalui</span> <span class="kn">import</span> <span class="n">PercivalUI</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">pkg_resources</span> <span class="kn">import</span> <span class="n">require</span>
+    <span class="n">require</span><span class="p">(</span><span class="s">&#39;h5py&#39;</span><span class="p">)</span>
+    <span class="n">require</span><span class="p">(</span><span class="s">&#39;numpy&#39;</span><span class="p">)</span>
+    <span class="n">require</span><span class="p">(</span><span class="s">&#39;future&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">pass</span> <span class="c"># not everyone use setuptools and that is OK...</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">()</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">()</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">percival.percivalui</span> <span class="kn">import</span> <span class="n">PercivalUI</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
 
 <span class="n">pcvl</span> <span class="o">=</span> <span class="n">PercivalUI</span><span class="p">()</span>
@@ -103,28 +220,26 @@ to achieve this with a single loop. The basic steps include:</p>
 
 <span class="c"># Scan through the desired DAC values</span>
 <span class="k">for</span> <span class="n">DAC_value</span> <span class="ow">in</span> <span class="n">DAC_scan_values</span><span class="p">:</span>
-    
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span> <span class="s">&quot;Setting DAC </span><span class="se">\&#39;</span><span class="s">some_gain</span><span class="se">\&#39;</span><span class="s"> = </span><span class="si">%d</span><span class="s">&quot;</span><span class="o">%</span><span class="n">DAC_value</span> <span class="p">)</span>
     <span class="c"># Set the desired control DAC parameter. In this example &quot;some_gain&quot;</span>
     <span class="n">pcvl</span><span class="o">.</span><span class="n">control</span><span class="o">.</span><span class="n">dacs</span><span class="o">.</span><span class="n">some_gain</span> <span class="o">=</span> <span class="n">DAC_value</span>
     
     <span class="c"># Acquire 10 frames for each step with a 0.1s exposure per frame</span>
     <span class="c"># With wait=True, this function will block until aquisition completes</span>
-    <span class="n">pcvl</span><span class="o">.</span><span class="n">acquire</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">nframes_per_step</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span> <span class="s">&quot;Acquiring </span><span class="si">%d</span><span class="s"> frames&quot;</span> <span class="o">%</span> <span class="n">nframes_per_step</span> <span class="p">)</span>
+    <span class="n">pcvl</span><span class="o">.</span><span class="n">acquire</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">nframes_per_step</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
     
 <span class="c"># Now wait for the data to be stored to disk. This function</span>
 <span class="c"># blocks until data capture is complete or stopped.</span>
 <span class="n">pcvl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">wait_complete</span><span class="p">(</span><span class="n">timeout</span> <span class="o">=</span> <span class="bp">None</span><span class="p">)</span>
 
-<span class="c"># Collect the information about where the data is stored</span>
-<span class="n">data_filename</span> <span class="o">=</span> <span class="n">pcvl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get_filename</span><span class="p">()</span>
-<span class="n">dataset_name</span> <span class="o">=</span> <span class="n">pcvl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get_datasetname</span><span class="p">()</span>
-
+<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span> <span class="s">&quot;Opening file: </span><span class="si">%s</span><span class="s">, dataset: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pcvl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span>  <span class="n">pcvl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">datasetname</span><span class="p">)</span> <span class="p">)</span>
 <span class="c"># Access the real data through h5py</span>
 <span class="kn">import</span> <span class="nn">h5py</span>
-<span class="n">h5file</span> <span class="o">=</span> <span class="n">h5py</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">data_filename</span><span class="p">,</span> <span class="s">&#39;rw&#39;</span><span class="p">)</span>
-<span class="n">dset</span> <span class="o">=</span> <span class="n">h5file</span><span class="p">[</span><span class="n">dataset_name</span><span class="p">]</span>
+<span class="n">h5file</span> <span class="o">=</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">pcvl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span> <span class="s">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">dset</span> <span class="o">=</span> <span class="n">h5file</span><span class="p">[</span><span class="n">pcvl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">datasetname</span><span class="p">]</span>
 
-<span class="k">print</span> <span class="s">&quot;Acquire dataset dimensions: &quot;</span><span class="p">,</span> <span class="n">dset</span><span class="o">.</span><span class="n">shape</span> 
+<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span> <span class="s">&quot;Acquire dataset dimensions: </span><span class="si">%s</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">dset</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="p">)</span> 
 </pre></div>
 </div>
 </div>
@@ -141,71 +256,68 @@ to achieve this with a single loop. The basic steps include:</p>
 
 
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="index.html">
-              <img class="logo" src="_static/PERCIVAL-logo.jpg" alt="Logo"/>
-            </a></p>
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">User Guide</a><ul>
-<li><a class="reference internal" href="#getting-started-simple-scan">Getting started: simple scan</a></li>
-<li><a class="reference internal" href="#percivalui-in-dawn">PercivalUI in DAWN</a></li>
-</ul>
-</li>
-</ul>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="frame-receiver.html" class="btn btn-neutral float-right" title="Frame Receiver" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation.html" class="btn btn-neutral" title="Installation instructions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="installation.html"
-                        title="previous chapter">Installation instructions</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="percivalui/docs/percivalui.html"
-                        title="next chapter">PercivalUI</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/userguide.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Ulrik Kofoed Pedersen, Diamond Light Source Ltd..
     </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="percivalui/docs/percivalui.html" title="PercivalUI"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="installation.html" title="Installation instructions"
-             >previous</a> |</li>
-        <li><a href="index.html">Percival 0.0.0 documentation</a> &raquo;</li> 
-      </ul>
-    </div>
-    <div class="footer">
-        &copy; Copyright 2014, Ulrik Kofoed Pedersen, Diamond Light Source Ltd..
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
-    </div>
-  </body>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
 </html>

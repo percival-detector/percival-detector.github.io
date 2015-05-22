@@ -1,3 +1,6 @@
 [submodule "percivalui"]
 	path = percivalui
 	url = https://github.com/percival-detector/percivalui.git
+[submodule "framereceiver"]
+	path = framereceiver
+	url = https://github.com/percival-detector/framereceiver.git

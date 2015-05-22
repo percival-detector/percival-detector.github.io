@@ -14,11 +14,13 @@ Guides and manuals
 ------------------
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    architecture
    installation
    userguide
+   frame-receiver
+   reference-percivalui
    
 Developers Documentation
 ------------------------
@@ -35,12 +37,6 @@ PercivalUI Python documentation
 
 The PercivalUI module contains python packages which are used to provide a
 user interface to the Percival detector in the form of a python class/object.
-
-.. toctree::
-   :maxdepth: 4
-
-   percivalui/docs/percivalui
-   percivalui/docs/detector
 
 Frame Grabber documentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
