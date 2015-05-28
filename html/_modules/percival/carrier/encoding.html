@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>percival.carrier.encoding &mdash; Percival 0.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Percival 0.0.0 documentation" href="../../../index.html"/>
+        <link rel="up" title="Module code" href="../../index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../../../index.html" class="icon icon-home"> Percival
+        
+
+        
+          
+          <img src="../../../_static/PERCIVAL-logo.jpg" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../architecture.html">System Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../userguide.html">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../userguide.html#getting-started-simple-scan">Getting started: simple scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../userguide.html#percivalui-in-dawn">PercivalUI in DAWN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../frame-receiver.html">Frame Receiver</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../frame-receiver.html#api-reference-documentation">API Reference Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference-percivalui.html">Percival Python API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../percivalui/docs/percival.html"><code class="docutils literal"><span class="pre">percival</span></code> package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/percival.html#module-percival.percivalui"><code class="docutils literal"><span class="pre">percival.percivalui</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../percivalui/docs/detector.html"><code class="docutils literal"><span class="pre">percival.detector</span></code> package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/detector.html#module-percival.detector.interface"><code class="docutils literal"><span class="pre">percival.detector.interface</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/detector.html#example-use-of-interfaces">Example use of interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/detector.html#module-percival.detector.parameter"><code class="docutils literal"><span class="pre">percival.detector.parameter</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../percivalui/docs/carrier.html"><code class="docutils literal"><span class="pre">percival.carrier</span></code> package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/carrier.html#module-percival.carrier.devices"><code class="docutils literal"><span class="pre">percival.carrier.devices</span></code> module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/carrier.html#module-percival.carrier.registers"><code class="docutils literal"><span class="pre">percival.carrier.registers</span></code> module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/carrier.html#module-percival.carrier.txrx"><code class="docutils literal"><span class="pre">percival.carrier.txrx</span></code> module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/carrier.html#module-percival.carrier.encoding"><code class="docutils literal"><span class="pre">percival.carrier.encoding</span></code> module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Percival</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      
+    <li>percival.carrier.encoding</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for percival.carrier.encoding</h1><div class="highlight"><pre>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Created on 4 Dec 2014</span>
+
+<span class="sd">@author: Ulrik Pedersen</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">unicode_literals</span><span class="p">,</span> <span class="n">absolute_import</span>
+<span class="kn">from</span> <span class="nn">builtins</span> <span class="kn">import</span> <span class="nb">bytes</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">itertools.izip</span> <span class="kn">as</span> <span class="nn">zip</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="kn">import</span> <span class="nn">struct</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="n">SINGLE_MSG_FMT</span> <span class="o">=</span> <span class="n">b</span><span class="s">&#39;!HI&#39;</span>
+
+<span class="n">NUM_BYTES_PER_MSG</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="sd">&quot;&quot;&quot;Number of bytes per message. Each message consist of a 2 byte address field and a 4 byte data field&quot;&quot;&quot;</span>
+
+<span class="n">DATA_ENCODING</span><span class="o">=</span><span class="s">&#39;latin-1&#39;</span> <span class="c"># Just because latin-1 allow values from 0-255</span>
+
+<span class="n">END_OF_MESSAGE</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\xFF\xFF\xAB\xBA\xBA\xC1</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">DATA_ENCODING</span><span class="p">)</span>
+<span class="sd">&quot;&quot;&quot;End of message is used in some cases. The EOM word is 0xFFFFABBABAC1&quot;&quot;&quot;</span>
+
+<span class="n">msg_packer</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">Struct</span><span class="p">(</span><span class="n">SINGLE_MSG_FMT</span><span class="p">)</span>
+
+<div class="viewcode-block" id="encode_message"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.encoding.encode_message">[docs]</a><span class="k">def</span> <span class="nf">encode_message</span><span class="p">(</span><span class="n">addr</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Encode a single address and dataword into a bytearray.</span>
+<span class="sd">    </span>
+<span class="sd">        :param addr: UART address (16bit integer)</span>
+<span class="sd">        :param word: data word (32bit integer)</span>
+<span class="sd">        :returns: bytearray of 6 bytes with address and dataword encoded</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">&quot;</span><span class="o">%</span><span class="p">([</span><span class="n">addr</span><span class="p">,</span> <span class="n">word</span><span class="p">]))</span>
+    <span class="n">encoded_msg</span> <span class="o">=</span> <span class="n">msg_packer</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">addr</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
+    <span class="c"># Python 2 -&gt; 3 compatibility workaround:</span>
+    <span class="c"># In python2 struct.pack() returns a string which we then</span>
+    <span class="c"># need to convert to a &#39;bytes&#39; object.</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">encoded_msg</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">encoded_msg</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span> <span class="n">encoded_msg</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">DATA_ENCODING</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;encode_message returning: </span><span class="si">%s</span><span class="s">&quot;</span><span class="o">%</span><span class="p">[</span><span class="n">encoded_msg</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">encoded_msg</span>
+</div>
+<div class="viewcode-block" id="encode_multi_message"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.encoding.encode_multi_message">[docs]</a><span class="k">def</span> <span class="nf">encode_multi_message</span><span class="p">(</span><span class="n">start_addr</span><span class="p">,</span> <span class="n">words</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Encode multiple 32bit words as a multi-message.</span>
+<span class="sd">    </span>
+<span class="sd">        :param start_addr: The UART starting address (a 16bit integer word)</span>
+<span class="sd">        :param words:      A list of 32bit integer words to be encoded</span>
+<span class="sd">        :returns:          A list of encoded words, each of which consists of 6 bytes: </span>
+<span class="sd">                           2 words of address and 4 words of data</span>
+<span class="sd">    &quot;&quot;&quot;</span> 
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">&quot;</span><span class="o">%</span><span class="p">([</span><span class="n">start_addr</span><span class="p">,</span> <span class="n">words</span><span class="p">]))</span>
+    <span class="n">addresses</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">start_addr</span><span class="p">,</span> <span class="n">start_addr</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">))</span>
+    <span class="n">encoded_msg</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">addresses</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">addr</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="n">addresses</span><span class="p">,</span> <span class="n">words</span><span class="p">]):</span>
+        <span class="n">encoded_msg</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">encode_message</span><span class="p">(</span><span class="n">addr</span><span class="p">,</span> <span class="n">word</span><span class="p">))</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;encode_multi_message returning: </span><span class="si">%s</span><span class="s">&quot;</span><span class="o">%</span><span class="n">encoded_msg</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">encoded_msg</span>
+</div>
+<div class="viewcode-block" id="decode_message"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.encoding.decode_message">[docs]</a><span class="k">def</span> <span class="nf">decode_message</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Decode a byte array into a list of (address, dataword) tuples.</span>
+<span class="sd">    </span>
+<span class="sd">        The address field is a 16bit integer and the dataword is a 32bit integer.</span>
+<span class="sd">    </span>
+<span class="sd">        :param msg: The input message</span>
+<span class="sd">        :type  msg: Bytearray</span>
+<span class="sd">        :returns:   A list of (address, data) tuples</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="n">extra_bytes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span><span class="o">%</span><span class="n">NUM_BYTES_PER_MSG</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">extra_bytes</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s">&quot;Too many (</span><span class="si">%d</span><span class="s">) bytes in message&quot;</span><span class="o">%</span><span class="n">extra_bytes</span><span class="p">)</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[:</span><span class="o">-</span><span class="n">extra_bytes</span><span class="p">]</span> <span class="c"># WARNING: we are chopping away some bytes here...</span>
+    <span class="n">num_words</span> <span class="o">=</span>  <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span><span class="o">//</span><span class="n">NUM_BYTES_PER_MSG</span>
+    <span class="n">fmt</span> <span class="o">=</span> <span class="n">b</span><span class="s">&quot;!&quot;</span>
+    <span class="n">fmt</span> <span class="o">+=</span> <span class="n">b</span><span class="s">&quot;HI&quot;</span> <span class="o">*</span> <span class="n">num_words</span>
+    
+    <span class="n">msg_unpacker</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">Struct</span><span class="p">(</span><span class="n">fmt</span><span class="p">)</span>
+    <span class="n">addr_word_list</span> <span class="o">=</span> <span class="n">msg_unpacker</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    
+    <span class="c"># reshape the linear list of (addr, word, addr, word, addr, word...) into a </span>
+    <span class="c"># neat [(addr,word), (addr, word) ... ] list</span>
+    <span class="n">addr_word_sets</span> <span class="o">=</span> <span class="p">[</span> <span class="n">aw_set</span> <span class="k">for</span> <span class="n">aw_set</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="nb">iter</span><span class="p">(</span><span class="n">addr_word_list</span><span class="p">)]</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span> <span class="p">]</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Returning: </span><span class="si">%s</span><span class="s">&quot;</span><span class="o">%</span><span class="nb">str</span><span class="p">(</span><span class="n">addr_word_sets</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">addr_word_sets</span>
+</pre></div></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Ulrik Kofoed Pedersen, Diamond Light Source Ltd..
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

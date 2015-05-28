@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>percival.carrier.registers &mdash; Percival 0.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Percival 0.0.0 documentation" href="../../../index.html"/>
+        <link rel="up" title="Module code" href="../../index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../../../index.html" class="icon icon-home"> Percival
+        
+
+        
+          
+          <img src="../../../_static/PERCIVAL-logo.jpg" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../architecture.html">System Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../userguide.html">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../userguide.html#getting-started-simple-scan">Getting started: simple scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../userguide.html#percivalui-in-dawn">PercivalUI in DAWN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../frame-receiver.html">Frame Receiver</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../frame-receiver.html#api-reference-documentation">API Reference Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference-percivalui.html">Percival Python API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../percivalui/docs/percival.html"><code class="docutils literal"><span class="pre">percival</span></code> package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/percival.html#module-percival.percivalui"><code class="docutils literal"><span class="pre">percival.percivalui</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../percivalui/docs/detector.html"><code class="docutils literal"><span class="pre">percival.detector</span></code> package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/detector.html#module-percival.detector.interface"><code class="docutils literal"><span class="pre">percival.detector.interface</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/detector.html#example-use-of-interfaces">Example use of interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/detector.html#module-percival.detector.parameter"><code class="docutils literal"><span class="pre">percival.detector.parameter</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../percivalui/docs/carrier.html"><code class="docutils literal"><span class="pre">percival.carrier</span></code> package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/carrier.html#module-percival.carrier.devices"><code class="docutils literal"><span class="pre">percival.carrier.devices</span></code> module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/carrier.html#module-percival.carrier.registers"><code class="docutils literal"><span class="pre">percival.carrier.registers</span></code> module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/carrier.html#module-percival.carrier.txrx"><code class="docutils literal"><span class="pre">percival.carrier.txrx</span></code> module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/carrier.html#module-percival.carrier.encoding"><code class="docutils literal"><span class="pre">percival.carrier.encoding</span></code> module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Percival</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      
+    <li>percival.carrier.registers</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for percival.carrier.registers</h1><div class="highlight"><pre>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Created on 5 Dec 2014</span>
+
+<span class="sd">@author: Ulrik Pedersen</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">unicode_literals</span><span class="p">,</span> <span class="n">absolute_import</span>
+<span class="kn">from</span> <span class="nn">builtins</span> <span class="kn">import</span> <span class="nb">range</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">encoding</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">from</span> <span class="nn">percival.carrier</span> <span class="kn">import</span> <span class="n">devices</span><span class="p">,</span> <span class="n">txrx</span>
+
+<span class="n">BoardTypes</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;left&quot;</span><span class="p">,</span>
+              <span class="s">&quot;bottom&quot;</span><span class="p">,</span>
+              <span class="s">&quot;carrier&quot;</span><span class="p">,</span>
+              <span class="s">&quot;plugin&quot;</span><span class="p">]</span>
+
+<span class="n">RegisterMapTypes</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;header&quot;</span><span class="p">:</span>     <span class="n">devices</span><span class="o">.</span><span class="n">HeaderInfo</span><span class="p">,</span>
+                    <span class="s">&quot;control&quot;</span><span class="p">:</span>    <span class="n">devices</span><span class="o">.</span><span class="n">ControlChannel</span><span class="p">,</span>
+                    <span class="s">&quot;monitoring&quot;</span><span class="p">:</span> <span class="n">devices</span><span class="o">.</span><span class="n">MonitoringChannel</span><span class="p">,</span>
+                    <span class="s">&quot;command&quot;</span><span class="p">:</span>    <span class="n">devices</span><span class="o">.</span><span class="n">Command</span><span class="p">}</span>
+
+<span class="c"># Each entry is a tuple of:     (description,                 read_addr, entries, words, DeviceSettings subclass)</span>
+<span class="n">CarrierUARTRegisters</span> <span class="o">=</span> <span class="p">{</span><span class="mh">0x0000</span><span class="p">:</span> <span class="p">(</span><span class="s">&quot;Header settings left&quot;</span><span class="p">,</span>         <span class="mh">0x012E</span><span class="p">,</span>       <span class="mi">1</span><span class="p">,</span>     <span class="mi">1</span><span class="p">,</span>  <span class="n">devices</span><span class="o">.</span><span class="n">HeaderInfo</span><span class="p">),</span>
+                        <span class="mh">0x0001</span><span class="p">:</span> <span class="p">(</span><span class="s">&quot;Control settings left&quot;</span><span class="p">,</span>        <span class="mh">0x012F</span><span class="p">,</span>       <span class="mi">1</span><span class="p">,</span>     <span class="mi">1</span><span class="p">,</span>  <span class="n">devices</span><span class="o">.</span><span class="n">ControlChannel</span><span class="p">),</span>
+                        <span class="mh">0x0041</span><span class="p">:</span> <span class="p">(</span><span class="s">&quot;Monitoring settings left&quot;</span><span class="p">,</span>     <span class="mh">0x0130</span><span class="p">,</span>       <span class="mi">1</span><span class="p">,</span>     <span class="mi">1</span><span class="p">,</span>  <span class="n">devices</span><span class="o">.</span><span class="n">MonitoringChannel</span><span class="p">),</span>
+                        <span class="mh">0x0081</span><span class="p">:</span> <span class="p">(</span><span class="s">&quot;Header settings bottom&quot;</span><span class="p">,</span>       <span class="mh">0x0131</span><span class="p">,</span>       <span class="mi">1</span><span class="p">,</span>     <span class="mi">1</span><span class="p">,</span>  <span class="n">devices</span><span class="o">.</span><span class="n">HeaderInfo</span><span class="p">),</span>
+                        <span class="mh">0x0082</span><span class="p">:</span> <span class="p">(</span><span class="s">&quot;Control settings bottom&quot;</span><span class="p">,</span>      <span class="mh">0x0132</span><span class="p">,</span>       <span class="mi">1</span><span class="p">,</span>     <span class="mi">1</span><span class="p">,</span>  <span class="n">devices</span><span class="o">.</span><span class="n">ControlChannel</span><span class="p">),</span>
+                        <span class="mh">0x008A</span><span class="p">:</span> <span class="p">(</span><span class="s">&quot;Monitoring settings bottom&quot;</span><span class="p">,</span>   <span class="mh">0x0133</span><span class="p">,</span>       <span class="mi">1</span><span class="p">,</span>     <span class="mi">1</span><span class="p">,</span>  <span class="n">devices</span><span class="o">.</span><span class="n">MonitoringChannel</span><span class="p">),</span>
+                        <span class="mh">0x0092</span><span class="p">:</span> <span class="p">(</span><span class="s">&quot;Header settings carrier&quot;</span><span class="p">,</span>      <span class="mh">0x0134</span><span class="p">,</span>       <span class="mi">1</span><span class="p">,</span>     <span class="mi">1</span><span class="p">,</span>  <span class="n">devices</span><span class="o">.</span><span class="n">HeaderInfo</span><span class="p">),</span>
+                        <span class="mh">0x0093</span><span class="p">:</span> <span class="p">(</span><span class="s">&quot;Control settings carrier&quot;</span><span class="p">,</span>     <span class="mh">0x0135</span><span class="p">,</span>       <span class="mi">1</span><span class="p">,</span>     <span class="mi">1</span><span class="p">,</span>  <span class="n">devices</span><span class="o">.</span><span class="n">ControlChannel</span><span class="p">),</span>
+                        <span class="mh">0x009B</span><span class="p">:</span> <span class="p">(</span><span class="s">&quot;Monitoring settings carrier&quot;</span><span class="p">,</span>  <span class="mh">0x0136</span><span class="p">,</span>       <span class="mi">1</span><span class="p">,</span>     <span class="mi">1</span><span class="p">,</span>  <span class="n">devices</span><span class="o">.</span><span class="n">MonitoringChannel</span><span class="p">),</span>
+                        <span class="mh">0x00A3</span><span class="p">:</span> <span class="p">(</span><span class="s">&quot;Header settings plugin&quot;</span><span class="p">,</span>       <span class="mh">0x0137</span><span class="p">,</span>       <span class="mi">1</span><span class="p">,</span>     <span class="mi">1</span><span class="p">,</span>  <span class="n">devices</span><span class="o">.</span><span class="n">HeaderInfo</span><span class="p">),</span>
+                        <span class="mh">0x00A4</span><span class="p">:</span> <span class="p">(</span><span class="s">&quot;Control settings plugin&quot;</span><span class="p">,</span>      <span class="mh">0x0138</span><span class="p">,</span>       <span class="mi">1</span><span class="p">,</span>     <span class="mi">1</span><span class="p">,</span>  <span class="n">devices</span><span class="o">.</span><span class="n">ControlChannel</span><span class="p">),</span>
+                        <span class="mh">0x00AC</span><span class="p">:</span> <span class="p">(</span><span class="s">&quot;Monitoring settings plugin&quot;</span><span class="p">,</span>   <span class="mh">0x0139</span><span class="p">,</span>       <span class="mi">1</span><span class="p">,</span>     <span class="mi">1</span><span class="p">,</span>  <span class="n">devices</span><span class="o">.</span><span class="n">MonitoringChannel</span><span class="p">),</span>
+                        
+                        <span class="mh">0x00EC</span><span class="p">:</span> <span class="p">(</span><span class="s">&quot;Command&quot;</span><span class="p">,</span>                      <span class="mh">0x0144</span><span class="p">,</span>       <span class="mi">1</span><span class="p">,</span>     <span class="mi">1</span><span class="p">,</span>  <span class="n">devices</span><span class="o">.</span><span class="n">Command</span><span class="p">),</span>
+                        
+                        <span class="c">#0x0001: (&quot;Header settings left&quot;,        1,     1,                    None),</span>
+                        <span class="p">}</span>
+<span class="sd">&quot;&quot;&quot;Look-up table of UART addresses and the corresponding details</span>
+
+<span class="sd">        The key is the UART write address and each item is a tuple of:</span>
+<span class="sd">    </span>
+<span class="sd">        * description</span>
+<span class="sd">        * UART read_addr</span>
+<span class="sd">        * Number of entries</span>
+<span class="sd">        * Words per entry</span>
+<span class="sd">        * Corresponding implementation of the :class:`percival.carrier.devices.IDeviceSettings` interface</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="UARTRegister"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.registers.UARTRegister">[docs]</a><span class="k">class</span> <span class="nc">UARTRegister</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39; Represent a specific UART register on the Percival Carrier Board</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">UART_ADDR_WIDTH</span> <span class="o">=</span> <span class="mi">16</span>
+    <span class="n">UART_WORD_WIDTH</span> <span class="o">=</span> <span class="mi">32</span>
+
+<div class="viewcode-block" id="UARTRegister.__init__"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.registers.UARTRegister.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_addr</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Constructor</span>
+<span class="sd">        </span>
+<span class="sd">            :param start_addr: UART start address which also functions as a look-up key to the functionality of that register</span>
+<span class="sd">            :type  start_addr: int</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">]))</span>
+        <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_readback_addr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_entries</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_words_per_entry</span><span class="p">,</span> <span class="n">DeviceClass</span><span class="p">)</span> <span class="o">=</span> <span class="n">CarrierUARTRegisters</span><span class="p">[</span><span class="n">start_addr</span><span class="p">]</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">settings</span> <span class="o">=</span> <span class="bp">None</span> <span class="c"># A devices.DeviceSettings object</span>
+        <span class="k">if</span> <span class="n">DeviceClass</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">settings</span> <span class="o">=</span> <span class="n">devices</span><span class="o">.</span><span class="n">Command</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">start_addr</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">UART_ADDR_WIDTH</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&quot;start_addr value 0x%H is greater than 16 bits&quot;</span><span class="o">%</span><span class="n">start_addr</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_start_addr</span> <span class="o">=</span> <span class="n">start_addr</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_readback_addr</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">UART_ADDR_WIDTH</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&quot;readback_addr value 0x%H is greater than 16 bits&quot;</span><span class="o">%</span><span class="bp">self</span><span class="o">.</span><span class="n">_readback_addr</span><span class="p">)</span>
+        
+       </div>
+<div class="viewcode-block" id="UARTRegister.get_read_cmdmsg"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.registers.UARTRegister.get_read_cmdmsg">[docs]</a>    <span class="k">def</span> <span class="nf">get_read_cmdmsg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Generate a message to do a readback (shortcut) command of the current register map</span>
+<span class="sd">        </span>
+<span class="sd">            :returns: A read UART command message</span>
+<span class="sd">            :rtype:  list of :class:`percival.carrier.txrx.TxMessage` objects</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">read_cmdmsg</span> <span class="o">=</span> <span class="n">encoding</span><span class="o">.</span><span class="n">encode_message</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_readback_addr</span><span class="p">,</span> <span class="mh">0x00000000</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">read_cmdmsg</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">txrx</span><span class="o">.</span><span class="n">TxMessage</span><span class="p">(</span><span class="n">read_cmdmsg</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_words_per_entry</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_entries</span><span class="p">)</span>
+    </div>
+<div class="viewcode-block" id="UARTRegister.get_write_cmdmsg"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.registers.UARTRegister.get_write_cmdmsg">[docs]</a>    <span class="k">def</span> <span class="nf">get_write_cmdmsg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Flatten the 2D matrix of datawords into one continuous list</span>
+<span class="sd">        </span>
+<span class="sd">            :returns: A write UART command message</span>
+<span class="sd">            :rtype:  list of :class:`percival.carrier.txrx.TxMessage` objects&quot;&quot;&quot;</span>
+        <span class="n">data_words</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">generate_map</span><span class="p">()</span>
+        <span class="n">write_cmdmsg</span> <span class="o">=</span> <span class="n">encoding</span><span class="o">.</span><span class="n">encode_multi_message</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_start_addr</span><span class="p">,</span> <span class="n">data_words</span><span class="p">)</span>
+        <span class="n">write_cmdmsg</span> <span class="o">=</span> <span class="p">[</span><span class="n">txrx</span><span class="o">.</span><span class="n">TxMessage</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">write_cmdmsg</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">write_cmdmsg</span>
+    
+    
+    
+    </div></div>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Ulrik Kofoed Pedersen, Diamond Light Source Ltd..
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

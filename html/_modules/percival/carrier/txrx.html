@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>percival.carrier.txrx &mdash; Percival 0.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Percival 0.0.0 documentation" href="../../../index.html"/>
+        <link rel="up" title="Module code" href="../../index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../../../index.html" class="icon icon-home"> Percival
+        
+
+        
+          
+          <img src="../../../_static/PERCIVAL-logo.jpg" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../architecture.html">System Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../userguide.html">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../userguide.html#getting-started-simple-scan">Getting started: simple scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../userguide.html#percivalui-in-dawn">PercivalUI in DAWN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../frame-receiver.html">Frame Receiver</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../frame-receiver.html#api-reference-documentation">API Reference Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference-percivalui.html">Percival Python API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../percivalui/docs/percival.html"><code class="docutils literal"><span class="pre">percival</span></code> package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/percival.html#module-percival.percivalui"><code class="docutils literal"><span class="pre">percival.percivalui</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../percivalui/docs/detector.html"><code class="docutils literal"><span class="pre">percival.detector</span></code> package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/detector.html#module-percival.detector.interface"><code class="docutils literal"><span class="pre">percival.detector.interface</span></code> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../percivalui/docs/detector.html#example-use-of-interfaces">Example use of interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/detector.html#module-percival.detector.parameter"><code class="docutils literal"><span class="pre">percival.detector.parameter</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../percivalui/docs/carrier.html"><code class="docutils literal"><span class="pre">percival.carrier</span></code> package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/carrier.html#module-percival.carrier.devices"><code class="docutils literal"><span class="pre">percival.carrier.devices</span></code> module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/carrier.html#module-percival.carrier.registers"><code class="docutils literal"><span class="pre">percival.carrier.registers</span></code> module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/carrier.html#module-percival.carrier.txrx"><code class="docutils literal"><span class="pre">percival.carrier.txrx</span></code> module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../percivalui/docs/carrier.html#module-percival.carrier.encoding"><code class="docutils literal"><span class="pre">percival.carrier.encoding</span></code> module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Percival</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      
+    <li>percival.carrier.txrx</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for percival.carrier.txrx</h1><div class="highlight"><pre>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Created on 4 Dec 2014</span>
+
+<span class="sd">@author: Ulrik Pedersen</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">unicode_literals</span><span class="p">,</span> <span class="n">absolute_import</span>
+<span class="kn">from</span> <span class="nn">builtins</span> <span class="kn">import</span> <span class="nb">bytes</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">binascii</span>
+<span class="kn">import</span> <span class="nn">socket</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span> 
+
+<span class="kn">from</span> <span class="nn">percival.carrier.encoding</span> <span class="kn">import</span> <span class="n">DATA_ENCODING</span><span class="p">,</span> <span class="n">NUM_BYTES_PER_MSG</span><span class="p">,</span> <span class="n">END_OF_MESSAGE</span>
+
+<div class="viewcode-block" id="TxMessage"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.txrx.TxMessage">[docs]</a><span class="k">class</span> <span class="nc">TxMessage</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Encapsulate a Percival carrier board message and the number of messages to expect in response&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="TxMessage.__init__"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.txrx.TxMessage.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">num_response_msg</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">expect_eom</span> <span class="o">=</span> <span class="bp">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; TxMessage constructor</span>
+<span class="sd">        </span>
+<span class="sd">            :param message: A Percival Carrier Board message contain address (2 bytes) and data (4 bytes)</span>
+<span class="sd">            :type message: Byte array</span>
+<span class="sd">            :param num_response_msg: Number of messages to expect in response</span>
+<span class="sd">            :param expected_eom: set true if end-of-message is expected in response</span>
+<span class="sd">            :type expected_eom: boolean</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_response_msg</span> <span class="o">=</span> <span class="n">num_response_msg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_message</span> <span class="o">=</span> <span class="n">message</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_expect_eom</span> <span class="o">=</span> <span class="n">expect_eom</span>
+        </div>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">message</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_message</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">expected_bytes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_response_msg</span> <span class="o">*</span> <span class="n">NUM_BYTES_PER_MSG</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">expected_response</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_expect_eom</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">END_OF_MESSAGE</span>
+        
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s">&quot;&lt;TxMessag msg=0x</span><span class="si">%s</span><span class="s"> exp. resp.: </span><span class="si">%d</span><span class="s"> bytes&gt;&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">binascii</span><span class="o">.</span><span class="n">hexlify</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_message</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_response_msg</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">s</span>
+</div>
+<div class="viewcode-block" id="TxRx"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.txrx.TxRx">[docs]</a><span class="k">class</span> <span class="nc">TxRx</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Transmit and receive data and commands to/from the Carrier Board through the XPort Ethernet</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+<div class="viewcode-block" id="TxRx.__init__"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.txrx.TxRx.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fpga_addr</span><span class="p">,</span> <span class="n">port</span> <span class="o">=</span> <span class="mi">10001</span><span class="p">,</span> <span class="n">timeout</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;TxRx Constructor</span>
+<span class="sd">        </span>
+<span class="sd">            :param fpga_addr: IP address or network name of the Carrier Board XPort device</span>
+<span class="sd">            :type  fpga_addr: string</span>
+<span class="sd">            :param port:      IP port number</span>
+<span class="sd">            :type  port:      int</span>
+<span class="sd">            :param timeout:   Socket communication timeout (seconds)</span>
+<span class="sd">            :type  timeout:   floating point</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">]))</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fpga_addr</span> <span class="o">=</span> <span class="p">(</span><span class="n">fpga_addr</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">settimeout</span><span class="p">(</span><span class="n">timeout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;connecting to FPGA: </span><span class="si">%s</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fpga_addr</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fpga_addr</span><span class="p">)</span>
+    </div>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">fpga_addr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fpga_addr</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">timeout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">gettimeout</span><span class="p">()</span>
+    <span class="nd">@timeout.setter</span>
+    <span class="k">def</span> <span class="nf">timeout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">settimeout</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    
+<div class="viewcode-block" id="TxRx.tx_msg"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.txrx.TxRx.tx_msg">[docs]</a>    <span class="k">def</span> <span class="nf">tx_msg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Transmit a single message to the Carrier Board</span>
+<span class="sd">        </span>
+<span class="sd">            :param msg: Message to transmit</span>
+<span class="sd">            :type  msg: Bytearray of :const:`percival.carrier.encoding.NUM_BYTES_PER_MSG` bytes&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    </div>
+<div class="viewcode-block" id="TxRx.rx_msg"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.txrx.TxRx.rx_msg">[docs]</a>    <span class="k">def</span> <span class="nf">rx_msg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expected_bytes</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Receive messages of up to `expected_bytes` length</span>
+<span class="sd">        </span>
+<span class="sd">            :param expected_bytes: Number of bytes expected to be received. If `expected_bytes`</span>
+<span class="sd">                                   is None, read at least one single message</span>
+<span class="sd">            :raises RuntimeError:  if a message of 0 bytes is received;indicating a broken socket connection</span>
+<span class="sd">            :returns: The recieved message</span>
+<span class="sd">            :rtype:   byte array</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">()</span>
+        <span class="n">block_read_bytes</span> <span class="o">=</span> <span class="n">expected_bytes</span>
+        <span class="n">expected_resp_len</span> <span class="o">=</span> <span class="n">expected_bytes</span>
+        
+        <span class="k">if</span> <span class="n">expected_bytes</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span> 
+            <span class="n">expected_resp_len</span> <span class="o">=</span> <span class="n">NUM_BYTES_PER_MSG</span>
+            <span class="n">block_read_bytes</span> <span class="o">=</span> <span class="mi">1024</span>
+        
+        <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">expected_resp_len</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">expected_bytes</span><span class="p">:</span>
+                <span class="n">block_read_bytes</span> <span class="o">=</span> <span class="n">expected_bytes</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+            <span class="n">chunk</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="n">block_read_bytes</span><span class="p">)</span>
+            <span class="n">chunk</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">chunk</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="n">DATA_ENCODING</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s">&quot;socket connection broken (expected a multiple of 6 bytes)&quot;</span><span class="p">)</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">chunk</span>
+        <span class="k">return</span> <span class="n">msg</span>
+</div>
+<div class="viewcode-block" id="TxRx.send_recv"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.txrx.TxRx.send_recv">[docs]</a>    <span class="k">def</span> <span class="nf">send_recv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">expected_bytes</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Send `msg` and wait for receipt of `expected_bytes` in response or timeout</span>
+<span class="sd">        </span>
+<span class="sd">            :param msg: UART message to send</span>
+<span class="sd">            :type  msg: Bytearray</span>
+<span class="sd">            :returns:   Response from UART</span>
+<span class="sd">            :rtype:     Bytearray</span>
+<span class="sd">        &quot;&quot;&quot;</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">tx_msg</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rx_msg</span><span class="p">(</span><span class="n">expected_bytes</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">resp</span>
+    </div>
+<div class="viewcode-block" id="TxRx.send_recv_message"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.txrx.TxRx.send_recv_message">[docs]</a>    <span class="k">def</span> <span class="nf">send_recv_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Send a message and wait for response</span>
+<span class="sd">        </span>
+<span class="sd">            :param message: a TxMessage object</span>
+<span class="sd">            :retuns: Response from UART</span>
+<span class="sd">            :rtype:  Bytearray</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">TxMessage</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s">&quot;message must be of type TxMessage, not </span><span class="si">%s</span><span class="s">&quot;</span><span class="o">%</span><span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">message</span><span class="p">)))</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">tx_msg</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rx_msg</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">expected_bytes</span><span class="p">)</span>
+        <span class="c"># TODO: check for expected response</span>
+        <span class="k">return</span> <span class="n">resp</span>
+        
+    </div>
+<div class="viewcode-block" id="TxRx.clean"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.txrx.TxRx.clean">[docs]</a>    <span class="k">def</span> <span class="nf">clean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Shutdown and close the socket safely</span>
+<span class="sd">            </span>
+<span class="sd">            Sockets are normally closed down cleanly on exit from the interpreter, however this method </span>
+<span class="sd">            may be used in case the socket need to be closed down temporarily.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">shutdown</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">SHUT_RDWR</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        </div></div>
+<span class="nd">@contextmanager</span>
+<div class="viewcode-block" id="TxRxContext"><a class="viewcode-back" href="../../../percivalui/docs/carrier.html#percival.carrier.txrx.TxRxContext">[docs]</a><span class="k">def</span> <span class="nf">TxRxContext</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Provide a context which keeps a `TxRx` module alive with an open socket only for the duration of the context</span>
+<span class="sd">    </span>
+<span class="sd">        Minimal example:</span>
+<span class="sd">        </span>
+<span class="sd">        &gt;&gt;&gt; msg = encode_message(0x0144, 0x00000000) # Header Info Readback</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; # Start the context - create the TxRx object and open the socket</span>
+<span class="sd">        &gt;&gt;&gt; with TxRxContext(&quot;192.168.1.3&quot;) as trx:</span>
+<span class="sd">        &gt;&gt;&gt;     response = trx.send_recv(msg)</span>
+<span class="sd">        &gt;&gt;&gt; # End of context - socket is closed down cleanly</span>
+<span class="sd">        &gt;&gt;&gt; </span>
+<span class="sd">        &gt;&gt;&gt; response = decode_message(response)</span>
+<span class="sd">        &gt;&gt;&gt; print response</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">trx</span> <span class="o">=</span> <span class="n">TxRx</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">yield</span> <span class="n">trx</span>
+    <span class="n">trx</span><span class="o">.</span><span class="n">clean</span><span class="p">()</span>
+    
+       
+            </div>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Ulrik Kofoed Pedersen, Diamond Light Source Ltd..
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
